@@ -9,7 +9,9 @@ const routes = [
   {
     path: "/",
     element: (
+      <ProtectedRoute>
         <HomePage />
+      </ProtectedRoute>
     ),
   },
   {
