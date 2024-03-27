@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../OrderPaymentPage/style.scss">
+</head>
+
+<body>
+    <div class="order-payment">
+
+        <h1 class="payment-head">Payment</h1>
+        <p class="payment-explanations">3 payment method available</p>
+        <hr>
+        <h2 class="payment-method-h2">Payment Method</h2>
+        <form action="">
+              <input type="radio" id="credit-card" class="payment-radio-class" name="payment-methods-names-radio"
+                value="HTML">
+              <label for="html">HTML</label><br>
+              <input type="radio" id="paypal" class="payment-radio-class" name="payment-methods-names-radio"
+                value="CSS">
+              <label for="css">CSS</label><br>
+              <input type="radio" id="cash" class="payment-radio-class" name="payment-methods-names-radio"
+                value="JavaScript">
+              <label for="javascript">JavaScript</label><br><br>
+
+            <h3>Cardholder Name</h3>
+            <input type="text" placeholder="Levi Ackerman">
+            <h3>Card Number</h3>
+            <input type="number" placeholder="2564 1421 0897 1244">
+
+            <div class="double-form-type">
+                <h3>Expiration Date</h3>
+                <input type="number">
+                <h3>CVV</h3>
+                <input type="number">
+                <hr>
+                <h3>Order Type</h3>
+                <div class="menu-container">
+                    <button id="menu-button">Dine In</button>
+                    <ul id="menu" class="hidden-menu">
+                        <li><a href="#">Dine Out</a></li>
+                        <li><a href="#">Dine Left</a></li>
+                        <li><a href="#">Dine Right</a></li>
+                    </ul>
+                </div>
+
+                <h3>CVV</h3>
+                <input type="password">
+            </div>
+
+            <input type="submit" value="Cancel">
+            <input type="submit" value="Confirm Payment">
+        </form>
+    </div>
+    <script src="../OrderPaymentPage/app.js"></script>
+</body>
+
+</html>
