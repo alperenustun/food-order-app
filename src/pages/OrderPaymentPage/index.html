@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../OrderPaymentPage/style.scss">
+    <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 
         <h1 class="payment-head">Payment</h1>
         <p class="payment-explanations">3 payment method available</p>
-        <hr>
+        <div class="line-form"></div>
         <h2 class="payment-method-h2">Payment Method</h2>
         <form action="">
               <input type="radio" id="credit-card" class="payment-radio-class" name="payment-methods-names-radio"
@@ -26,33 +26,48 @@
                 value="JavaScript">
               <label for="javascript">JavaScript</label><br><br>
 
-            <h3>Cardholder Name</h3>
-            <input type="text" placeholder="Levi Ackerman">
-            <h3>Card Number</h3>
-            <input type="number" placeholder="2564 1421 0897 1244">
+            <h3 class="card-text">Cardholder Name</h3>
+            <input type="text" placeholder="Levi Ackerman" class="full-width-input">
+            <h3 class="card-text">Card Number</h3>
+            <input type="number" placeholder="2564 1421 0897 1244" class="full-width-input">
 
             <div class="double-form-type">
-                <h3>Expiration Date</h3>
-                <input type="number">
-                <h3>CVV</h3>
-                <input type="number">
-                <hr>
-                <h3>Order Type</h3>
-                <div class="menu-container">
-                    <button id="menu-button">Dine In</button>
-                    <ul id="menu" class="hidden-menu">
-                        <li><a href="#">Dine Out</a></li>
-                        <li><a href="#">Dine Left</a></li>
-                        <li><a href="#">Dine Right</a></li>
-                    </ul>
+                <div class="first-double-type">
+                    <div class="left-first-type">
+                        <h3 class="card-text">Expiration Date</h3>
+                        <input type="number" class="half-width-input">
+                    </div>
+                    <div class="right-first-type">
+                        <h3 class="card-text">CVV</h3>
+                        <input type="password" class="half-width-input">
+                    </div>
+                </div>
+                <div class="line-form"></div>
+
+                <div class="second-double-type">
+                    <div class="left-first-type">
+
+                        <h3 class="card-text">Order Type</h3>
+
+                        <button id="menu-button" class="card-text">Dine In</button>
+                        <ul id="menu" class="hidden-menu">
+                            <li><a href="#">Dine Out</a></li>
+                            <li><a href="#">Dine Left</a></li>
+                            <li><a href="#">Dine Right</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="right-first-type">
+                        <h3 class="card-text">Table No</h3>
+                        <input type="number" class="right-first-type-number">
+                    </div>
                 </div>
 
-                <h3>CVV</h3>
-                <input type="password">
+
             </div>
 
-            <input type="submit" value="Cancel">
-            <input type="submit" value="Confirm Payment">
+            <input type="submit" class="cancel-button" value="Cancel">
+            <input type="submit" class="confirm-button" value="Confirm Payment">
         </form>
     </div>
     <script src="../OrderPaymentPage/app.js"></script>
