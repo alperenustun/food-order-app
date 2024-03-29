@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    justify-content: center;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    hr {
+        width: 100%;
+        height: 1px;
+    }
+
+    .order-payment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        padding: 50px;
+        background-color: #1F1D2B;
+        color: #ffffff;
+        font-family: Barlow, sans-serif;
+
+        .line-form {
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 20px 0;
+            opacity: 0.2;
+        }
+
+        .payment-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+
+        }
+
+        .payment-explanations {
+            color: #ABBBC2;
+            padding: 0;
+        }
+
+        .card-text {
+            //styleName: Body / Normal - Medium;
+            font-family: Barlow;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 18.2px;
+            text-align: left;
+
+        }
+
+        .cancel-button {
+            width: 175px;
+            height: 48px;
+            padding: 14px 14px 14px 14px;
+            gap: 8px;
+            border-radius: 8px;
+            border: 1px;
+            background: none;
+            border-style: solid;
+            border-color: #EA7C69;
+            color: #EA7C69;
+            cursor: pointer;
+
+        }
+
+        .confirm-button {
+            width: 175px;
+            height: 48px;
+            padding: 14px 14px 14px 14px;
+            gap: 8px;
+            border-radius: 8px;
+            border: 1px;
+            background: #EA7C69;
+            border-style: solid;
+            border-color: #EA7C69;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .double-form-type {
+            display: block;
+
+            .first-double-type {
+
+
+                .half-width-input {
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 8px;
+                    border: 1px;
+
+                    background-color: #2D303E;
+                }
+
+                .card-text {
+                    font-size: 16px;
+                    display: block;
+                }
+
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            .second-double-type {
+                display: flex;
+
+                gap: 10px;
+            }
+        }
+    }
+
+    .hidden-menu {
+        display: none;
+    }
+
+    .right-first-type {
+        width: 100%;
+
+        .right-first-type-password {
+            width: 100%;
+        }
+    }
+
+    .left-first-type {
+        width: 100%;
+    }
+
+    #menu-button {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px;
+
+        background: none;
+        color: white;
+
+    }
+
+    .right-first-type-number {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px;
+
+        background-color: #2D303E;
+        color: white;
+    }
+
+    .full-width-input {
+        width: 100%;
+        height: 48px;
+        border-radius: 8px;
+        border: 1px;
+
+        background-color: #2D303E;
+        color: white;
+    }
+
+    .full-width-input::placeholder {
+        color: white;
+    }
+
+}
