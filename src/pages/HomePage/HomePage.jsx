@@ -9,7 +9,7 @@ function HomePage() {
     <div>
       <Sidebar />
 
-      <div className="mainRooddeğiştit">
+      <div className="mainRoot">
         <OrderPaymentPage />
 
       </div>
