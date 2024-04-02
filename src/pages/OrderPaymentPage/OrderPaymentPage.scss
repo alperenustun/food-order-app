@@ -178,6 +178,7 @@ body {
                 width: 50%;
                 gap: 10px;
                 flex-direction: column;
+                justify-content: end;
 
                 .half-width-input {
                     width: 100%;
@@ -352,7 +353,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     line-height: 18.2px;
-    text-align: left;
+    text-align: center;
 }
 
 .payment-photo-options.selected {
