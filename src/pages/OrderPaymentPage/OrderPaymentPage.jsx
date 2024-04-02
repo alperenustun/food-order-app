@@ -227,7 +227,7 @@ function OrderPaymentPage() {
                                 <button id="dropdown-btn" onClick={toggleDropDownMenu}>
                                     {selectedDropDownOption || 'Dine In'} <img src={downArrow} alt="Down arrow" className="drop-down-img" />
                                 </button>
-                                <div className={`dropdown-content ${isDropDownOpen ? 'dropdown-open' : ''}`} id="dropdown-content">
+                                <div className={`dropdown-content ${isDropDownOpen ? 'dropdown-open' : ''}`} id="dropdown-content-orders">
                                     <button value={"orderType1"} onClick={handleDropDownOptionClick}>Order Type 1</button>
                                     <button value={"orderType2"} onClick={handleDropDownOptionClick}>Order Type 2</button>
                                     <button value={"orderType3"} onClick={handleDropDownOptionClick}>Order Type 3</button>
