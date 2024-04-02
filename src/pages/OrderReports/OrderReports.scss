@@ -1,0 +1,121 @@
+$order-report-background: #2b2b2b;
+$table-background: #323232;
+$primary-color: #4b9cdb;
+$secondary-color: #6772e5;
+$completed-color: #2ecc71;
+$preparing-color: #3498db;
+$pending-color: #e67e22;
+$font-color: #ffffff;
+
+.order-report-container {
+    background-color: $order-report-background;
+    color: $font-color;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #1F1D2B;
+
+    .order-report-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h1 {
+            font-family: "Barlow", sans-serif;
+            font-weight: 600;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-family: "Barlow", sans-serif;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        thead {
+            th {
+                font-weight: 600;
+            }
+        }
+
+        tbody {
+            tr {
+                border: none;
+
+                td {
+                    vertical-align: middle;
+                    font-family: "Barlow", sans-serif;
+                    font-weight: 200;
+
+                    .status {
+                        padding: 5px 10px;
+                        border-radius: 16px;
+                        color: $font-color;
+                        font-weight: 600;
+                        text-align: center;
+                        font-family: "Barlow", sans-serif;
+                        font-weight: 200;
+
+                        .status-opacitylow {
+                            opacity: 1;
+                        }
+
+
+                        &.completed {
+                            background-color: #6BE2BE3D;
+                            font-family: "Barlow", sans-serif;
+                        }
+
+                        &.preparing {
+                            background-color: #9290FE33;
+                            font-family: "Barlow", sans-serif;
+                        }
+
+                        &.pending {
+                            background-color: #FFB57233;
+                            font-family: "Barlow", sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-order-btn {
+        background: none;
+        font-family: "Barlow", sans-serif;
+        padding: 10px 15px;
+        border: 1px solid rgb(141, 141, 141);
+        border-radius: 4px;
+        color: $font-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(rgb(141, 141, 141), 10%);
+        }
+
+        &:active {
+            background-color: darken(rgb(141, 141, 141), 20%);
+        }
+    }
+}
+
+.customer-info {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
