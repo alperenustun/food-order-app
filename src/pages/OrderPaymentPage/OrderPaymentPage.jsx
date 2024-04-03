@@ -20,7 +20,19 @@ function OrderPaymentPage() {
 
     });
 
+    //useState hookları :
+
+    // useState kullanarak bir state değişkeni ve onu güncellemek için bir fonksiyon oluşturuyoruz.
+    // Başlangıç değeri olarak isteğe bağlı 'dine-in' belirledik
+    const [selectedDropDownOption, setSelectedDropDownOption] = useState('dine-in');
+
+    // Seçilen ödeme yöntemini saklamak için bir durum oluşturun
+    const [PaymentOption, setSelectedPaymentOption] = useState(null);
+
+    const [expiration, setExpiration] = useState('');
+
     // İnput alanındaki değeri düzenlemek için bir fonksiyon
+    // Kullanıcının girdiği değeri kontrol edin ve gerektiğinde formatlayın
     const formatCardNumber = (input) => {
         // Girilen değeri sadece rakamlara dönüştür
         let cardNumber = input.replace(/\D/g, '');
@@ -94,18 +106,13 @@ function OrderPaymentPage() {
         }
     };
 
-    // Seçilen ödeme yöntemini saklamak için bir durum oluşturun
-    const [PaymentOption, setSelectedPaymentOption] = useState(null);
-
     // Seçenek değiştiğinde durumu güncelleyen bir fonksiyon oluşturun
-    function handleOptionChange(e) {
+    const handleOptionChange = (e) => {
 
         setFormData({ ...formData, PaymentOption: e.target.value });
         setSelectedPaymentOption(e.target.value);
         console.log(e.target.value);
     }
-
-    const [expiration, setExpiration] = useState('');
 
     const handleExpirationChange = (e) => {
         const { value } = e.target;
@@ -119,43 +126,52 @@ function OrderPaymentPage() {
         setExpiration(formattedValue);
     };
 
-    const [isDropDownOpen, setDropDownIsOpen] = useState(false);
-    const [selectedDropDownOption, setSelectedDropDownOption] = useState('');
-
-    const toggleDropDownMenu = () => {
-        setDropDownIsOpen(!isDropDownOpen);
-    };
-
-    const [OrderType, setOrderType] = useState(null); //burada seçilen order type'ı saklamak için bir state oluşturduk.
-    // Seçenek değiştiğinde durumu güncelleyen bir fonksiyon oluşturun
-
-
-    const handleDropDownOptionClick = (e) => {
-        const valueOfOrder = e.target.value;
-        setFormData({ ...formData, OrderType: valueOfOrder });
-        setOrderType(valueOfOrder);
-        console.log(valueOfOrder, "valueOfOrder");
-        setDropDownIsOpen(false);
+    // Kullanıcı bir option seçtiğinde çağrılacak fonksiyon.
+    // Event parametresinden seçilen option'ın değerini alıp state değişkenini güncelliyoruz.
+    const handleSelectChange = (e) => {
+        setSelectedDropDownOption(e.target.value);
+        setFormData({ ...formData, OrderType: e.target.value });
+        console.log(e.target.value);
     };
 
     const handleCancel = () => {
-        setSelectedPaymentOption('');
+
         setFormData({
-            // Tüm form alanlarını boşaltın
+            cardHolderName: '',
+            cardNumber: '',
+            cvv: '',
+            tableNo: '',
+            PaymentOption: '',
+            OrderType: ''
         });
+        setSelectedPaymentOption('null');
         setExpiration('');
         setSelectedDropDownOption('');
     };
 
-
     // Form gönderildiğinde yapılacak işlemler
     function handleSubmit(e) {
         e.preventDefault();
-        // formData state'ini kullanarak istediğiniz işlemi yapabilirsiniz
-        console.log(formData);
-        console.log('Expiration:', expiration);
-        // Burada form verilerini bir API'ye gönderebilir, bir veritabanına kaydedebilir veya başka bir işlem yapabilirsiniz
+
+        // Gerekli alanların isimlerini bir array olarak listeliyoruz.
+        const requiredFields = ['cardHolderName', 'cardNumber', 'cvv', 'tableNo', 'PaymentOption', 'OrderType'];  //Gerekli alanlar
+
+        // Her bir gerekli alan için, formData içinde bir değer olup olmadığını kontrol ediyoruz.
+        //every metodunun içinde bir arrow fonksiyonu (field => formData[field]) kullanılıyor. Bu fonksiyon, requiredFields dizisindeki her bir field için çağrılıyor.
+        //formData[field] ifadesi, formData objesinde, o anki field ismine karşılık gelen değeri alıyor. Örneğin, field değişkeni "firstName" olduğunda, formData['firstName'] ifadesi, formData objesindeki firstName anahtarının değerini verir.
+        //Eğer formData[field] ifadesi bir değer döndürüyorsa (yani bu alan boş değilse ve dolayısıyla bir değer içeriyorsa), o alan için kontrol başarılı sayılır. Değer undefined, null, boş bir string (""), ya da başka bir "falsy" değerse, bu kontrol başarısız sayılır ve every metodu false döndürür.
+        const isFormComplete = requiredFields.every(field => formData[field]);
+
+        if (!isFormComplete) {
+
+            alert('Lütfen tüm alanları doldurunuz. Bu alert cancel buttonda da çalışıyor ?');
+        } else {
+
+            console.log(formData);
+            // Form verilerini bir API'ye gönderme, bir veritabanına kaydetme veya başka bir işlem yapabiliriz
+        }
     }
+
 
     return (
         <div>
@@ -222,19 +238,19 @@ function OrderPaymentPage() {
                         <div className="double-form-type">
 
                             <div className="first-double-type">
-                                <p className="card-text">Order Type</p>
 
-                                <button id="dropdown-btn" onClick={toggleDropDownMenu}>
-                                    {selectedDropDownOption || 'Dine In'} <img src={downArrow} alt="Down arrow" className="drop-down-img" />
-                                </button>
-                                <div className={`dropdown-content ${isDropDownOpen ? 'dropdown-open' : ''}`} id="dropdown-content-orders">
-                                    <button value={"orderType1"} onClick={handleDropDownOptionClick}>Order Type 1</button>
-                                    <button value={"orderType2"} onClick={handleDropDownOptionClick}>Order Type 2</button>
-                                    <button value={"orderType3"} onClick={handleDropDownOptionClick}>Order Type 3</button>
-                                    <button value={"orderType4"} onClick={handleDropDownOptionClick}>Order Type 4</button>
+                                {/* buraya bir dropdown ekleyin ve seçilen değeri state'e kaydedin */}
+                                <label className="card-text" for="order-types">
+                                    <img src={downArrow} alt="Down arrow" className="drop-down-img" />
+                                    Order Type</label>
 
-
-                                </div>
+                                <select name="order-types" id="order-types" onChange={handleSelectChange} value={selectedDropDownOption}>
+                                    <option value="dine-in">Dine In</option>
+                                    <option value="dine-out">Dine Out</option>
+                                    <option value="dine-on">Dine On</option>
+                                    <option value="dine-under">Dine Under</option>
+                                </select>
+                                {/* <p> selected option is : {selectedDropDownOption}</p> */}
 
                             </div>
                             <div className="first-double-type">
@@ -244,7 +260,7 @@ function OrderPaymentPage() {
                         </div>
 
                         <div className="buttons-div">
-                            <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                            <button type="button" className="cancel-button" onClick={handleCancel}>Cancel</button>
                             <button type="submit" className="confirm-button">Confirm Payment</button>
                         </div>
                     </div>
