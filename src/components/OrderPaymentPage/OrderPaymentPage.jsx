@@ -186,19 +186,19 @@ function OrderPaymentPage() {
                 <form className="payment-form-style">
                     <div className="only-labels">
                         <label htmlFor="option1" className={`payment-photo-options ${PaymentOption === "option1" ? "selected" : ""}`}>
-                            <input type="radio" id="option1" name="options" value="option1" checked={PaymentOption === "option1"}
+                            <input className="input-type-radio" type="radio" id="option1" name="options" value="option1" checked={PaymentOption === "option1"}
                                 onChange={handleOptionChange} />
                             <img src={cCard} alt="" srcSet="" />
                             Credit Card
                         </label>
                         <label htmlFor="option2" className={`payment-photo-options ${PaymentOption === "option2" ? "selected" : ""}`}>
-                            <input type="radio" id="option2" name="options" value="option2" checked={PaymentOption === "option2"}
+                            <input className="input-type-radio" type="radio" id="option2" name="options" value="option2" checked={PaymentOption === "option2"}
                                 onChange={handleOptionChange} />
                             <img src={paypalPhoto} alt="" srcSet="" />
                             Paypal
                         </label>
                         <label htmlFor="option3" className={`payment-photo-options ${PaymentOption === "option3" ? "selected" : ""}`}>
-                            <input type="radio" id="option3" name="options" value="option3" checked={PaymentOption === "option3"}
+                            <input className="input-type-radio" type="radio" id="option3" name="options" value="option3" checked={PaymentOption === "option3"}
                                 onChange={handleOptionChange} />
                             <img src={cashPhoto} alt="" srcSet="" />
                             Cash
