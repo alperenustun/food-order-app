@@ -34,15 +34,13 @@ const OrderReports = ({ orders }) => {
         setSortedOrders(sortedOrders);
     };
 
-
-
     return (
         <div className="order-report-container">
             <div className="order-report-header">
-                <h1>Order Report</h1>
+                <h1 className="order-report-h1">Order Report</h1>
                 <div className="filter-order-btn">
-                    <img src={filterPhoto} alt="filter-icon" />
-                    <select onChange={handleFilterChange} className="filter-select">
+                    <img className="filter-order-btn-img" src={filterPhoto} alt="filter-icon" />
+                    <select onChange={handleFilterChange} className="filter-order-select">
                         <option value="">Filter Orders</option>
                         <option value="highest">Highest Payment</option>
                         <option value="lowest">Lowest Payment</option>
@@ -50,29 +48,29 @@ const OrderReports = ({ orders }) => {
                     </select>
                 </div>
             </div>
-            <table>
+            <table className="order-reports-table">
                 <thead className="border-line-order-report">
                     <tr>
-                        <th>Customer</th>
-                        <th>Menu</th>
-                        <th>Total Payment</th>
-                        <th>Status</th>
+                        <th className="order-report-th">Customer</th>
+                        <th className="order-report-th">Menu</th>
+                        <th className="order-report-th">Total Payment</th>
+                        <th className="order-report-th">Status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="order-tbody">
                     {sortedOrders.map((order, index) => (
-                        <tr key={index}>
-                            <td>
+                        <tr className="order-body-tr" key={index}>
+                            <td className="order-report-td">
                                 <div className="customer-info">
                                     <img src={order.customerAvatar} alt={order.customerName} />
                                     {order.customerName}
                                 </div>
                             </td>
-                            <td>{order.menu}</td>
-                            <td>${order.totalPayment}</td>
-                            <td>
-                                <div className={`status ${statusClass(order.status)}`}>
-                                    <span className="status-opacitylow">{order.status}</span>
+                            <td className="order-report-td">{order.menu}</td>
+                            <td className="order-report-td">${order.totalPayment}</td>
+                            <td className="order-report-td">
+                                <div className={`order-status ${statusClass(order.status)}`}>
+                                    <span className="order-status-opacitylow">{order.status}</span>
                                 </div>
                             </td>
                         </tr>

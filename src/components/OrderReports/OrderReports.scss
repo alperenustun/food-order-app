@@ -1,14 +1,6 @@
-$order-report-background: #2b2b2b;
-$table-background: #323232;
-$primary-color: #4b9cdb;
-$secondary-color: #6772e5;
-$completed-color: #2ecc71;
-$preparing-color: #3498db;
-$pending-color: #e67e22;
-$font-color: #ffffff;
+@use "../../styles/abstracts/variables" as *;
 
 .order-report-container {
-    background-color: $order-report-background;
     color: $font-color;
     padding: 20px;
     border-radius: 8px;
@@ -21,46 +13,45 @@ $font-color: #ffffff;
         align-items: center;
         margin-bottom: 20px;
 
-        h1 {
+        .order-report-h1 {
             font-family: "Barlow", sans-serif;
             font-weight: 600;
         }
     }
 
-    table {
+    .order-reports-table {
         width: 100%;
         border-collapse: collapse;
         border-radius: 8px;
         overflow: hidden;
 
-        th {
+        .order-report-th {
             padding: 15px;
             text-align: left;
             font-family: "Barlow", sans-serif;
             font-weight: 600;
         }
 
-        td {
+        .order-report-td {
             padding: 15px;
             text-align: left;
         }
 
-        thead {
-            th {
-                font-weight: 600;
-            }
+        .border-line-order-report {
+            border-bottom: 2px solid #585858;
+
         }
 
-        tbody {
-            tr {
+        .order-tbody {
+            .order-body-tr {
                 border: none;
 
-                td {
+                .order-report-td {
                     vertical-align: middle;
                     font-family: "Barlow", sans-serif;
                     font-weight: 200;
 
-                    .status {
+                    .order-status {
                         padding: 5px 10px;
                         border-radius: 16px;
                         color: $font-color;
@@ -69,23 +60,23 @@ $font-color: #ffffff;
                         font-family: "Barlow", sans-serif;
                         font-weight: 200;
 
-                        .status-opacitylow {
+                        .order-status-opacitylow {
                             opacity: 1;
                         }
 
 
                         &.completed {
-                            background-color: #6BE2BE3D;
+                            background-color: $completed-color;
                             font-family: "Barlow", sans-serif;
                         }
 
                         &.preparing {
-                            background-color: #9290FE33;
+                            background-color: $preparing-color;
                             font-family: "Barlow", sans-serif;
                         }
 
                         &.pending {
-                            background-color: #FFB57233;
+                            background-color: $pending-color;
                             font-family: "Barlow", sans-serif;
                         }
                     }
@@ -102,7 +93,7 @@ $font-color: #ffffff;
         color: $font-color;
         cursor: pointer;
 
-        img {
+        .filter-order-btn-img {
             width: 20px;
             height: 20px;
             position: relative;
@@ -128,11 +119,7 @@ $font-color: #ffffff;
     align-items: center;
 }
 
-.border-line-order-report {
-    border-bottom: 2px solid #585858;
-}
-
-.filter-select {
+.filter-order-select {
     background-color: #1F1D2B;
     color: #ffffff;
     border: none;
@@ -149,11 +136,11 @@ $font-color: #ffffff;
 
 }
 
-.filter-select:focus {
+.filter-order-select:focus {
     outline: none;
 }
 
-.filter-select:active {
+.filter-order-select:active {
     background-color: #37334d;
 
 }
