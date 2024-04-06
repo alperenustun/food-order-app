@@ -164,7 +164,7 @@ function OrderPaymentPage() {
 
         if (!isFormComplete) {
 
-            alert('Lütfen tüm alanları doldurunuz. Bu alert cancel buttonda da çalışıyor ?');
+            alert('Lütfen tüm alanları doldurunuz.');
         } else {
 
             console.log(formData);
