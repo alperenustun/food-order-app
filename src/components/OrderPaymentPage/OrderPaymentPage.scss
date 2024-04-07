@@ -46,7 +46,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        width: fit-content;
         font-size: 28px;
         font-family: "Barlow", sans-serif;
         font-weight: 600;
@@ -62,6 +62,7 @@
         text-align: left;
         color: #ABBBC2;
         padding: 0;
+        width: fit-content;
     }
 
     .payment-methods-text {
@@ -71,6 +72,7 @@
         line-height: 28px;
         text-align: left;
         margin-bottom: 10px;
+        width: fit-content;
     }
 
     .card-text {
@@ -94,7 +96,7 @@
         margin-top: 100px;
 
         .cancel-button {
-            width: 175px;
+            width: 50%;
             height: 48px;
             padding: 14px 14px 14px 14px;
             gap: 8px;
@@ -129,7 +131,7 @@
         }
 
         .confirm-button {
-            width: 175px;
+            width: 50%;
             height: 48px;
             padding: 14px 14px 14px 14px;
             gap: 8px;
@@ -457,4 +459,14 @@
 #dropdown-btn:hover,
 #dropdown-btn:focus {
     background-color: #3d3953;
+}
+
+@media (max-width: 525px) {
+    .order-payment {
+        width: 100%;
+
+        .first-double-type {
+            justify-content: space-between;
+        }
+    }
 }
