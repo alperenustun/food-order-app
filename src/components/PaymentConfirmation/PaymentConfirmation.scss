@@ -1,0 +1,60 @@
+.PaymentConfirmation {
+    background-color: #1F1D2B;
+    border: 2px solid red;
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+.PaymentConfirmation-box {
+    max-width: 350px;
+    margin: 20px auto;
+    border: 2px solid red;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+
+.PaymentConfirmation-Button-Box {
+    max-width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Barlow", sans-serif;
+    border: 2px solid red;
+
+
+
+}
+
+.PaymentConfirmation-Button {
+    background-color: transparent;
+    color: #EA7C69;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #393C49;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.PaymentConfirmation-Button:hover {
+    background-color: #EA7C69;
+    color: white;
+
+}
+
+.PaymentConfirmationtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px;
+    border: 2px solid red;
+}
+
+.PaymentConfirmationtitle div{
+    display: flex;
+    justify-content: space-between;
+    gap : 20px ;
+}
