@@ -13,7 +13,7 @@ const mockFoodData = [
     id: 2,
     name: "Pizza",
     price: 190,
-    quantity: 12,
+    quantity: 2,
   },
   {
     id: 3,

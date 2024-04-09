@@ -41,6 +41,10 @@
 
 }
 
+.food-card-totalprice-p {
+    display: flex;
+}
+
 .food-card-input {
     background: #2D303E;
     color: #889898;
@@ -61,17 +65,9 @@
 }
 
 .food-card-button {
-    width: 30px;
     border-radius: 8px;
     border: 1px solid #EA7C69;
     background-color: transparent;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right:10px;
+    padding: 10px;
    
-}
-
-.food-card-delete {
-    margin: 0 auto;
 }

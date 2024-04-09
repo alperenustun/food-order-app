@@ -17,7 +17,7 @@ function ConfirmationFood({ food }) {
         </div>
         <div className="food-card-totalprice">
           <p className="food-card-name-quantity">{food.quantity}</p>
-          <p>$ {totalPrice}</p>
+          <p className="food-card-totalprice-p">$ {totalPrice}</p>
         </div>
       </div>
       <div className="food-card-inputButtonContainer">
