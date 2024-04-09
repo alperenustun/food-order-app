@@ -1,19 +1,26 @@
 .PaymentConfirmation {
     background-color: #1F1D2B;
-    border: 2px solid red;
-    max-width: 400px;
+    width: 400px;
     margin-left: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
 }
 
 .PaymentConfirmation-box {
     max-width: 350px;
-    margin: 20px auto;
-    border: 2px solid red;
-    position: relative;
-    top: 0;
-    right: 0;
+    margin: 20px auto 20px auto;
+    font-family: "Barlow", sans-serif;
 }
 
+.PaymentConfirmation-box-h2 {
+    font-family: "Barlow", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
 
 .PaymentConfirmation-Button-Box {
     max-width: 230px;
@@ -21,9 +28,6 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Barlow", sans-serif;
-    border: 2px solid red;
-
-
 
 }
 
@@ -44,17 +48,69 @@
 
 }
 
+.PaymentConfirmationtitle-h3 {
+    font-weight: 600;
+    font-family: "Barlow", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+
+}
+
 .PaymentConfirmationtitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 16px;
-    border: 2px solid red;
+
 }
 
-.PaymentConfirmationtitle div{
+.PaymentConfirmationtitle div {
     display: flex;
     justify-content: space-between;
-    gap : 20px ;
+    gap: 20px;
+}
+
+.food-container {
+    border-top: 1px solid #393C49;
+    border-bottom: 1px solid #393C49;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.PaymentConfirmation-Subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.PaymentConfirmation-Subtotal-h3 {
+    color: #ABBBC2;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.PaymentConfirmation-Subtotal-value {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+}
+
+.PaymentConfirmation-button-payment {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    background: #EA7C69;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    border: none;
+
+
+
 }

@@ -1,0 +1,77 @@
+
+
+.food-card-box-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.food-card-name {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 14px 14px 14px;
+    gap: 5px;
+}
+
+.food-card-name-h3 {
+    font-size: 14px;
+}
+
+.food-card-name-price {
+    font-size: 12px;
+    color: #ABBBC2;
+    gap: 5px;
+}
+
+.food-card-name-quantity {
+    border-radius: 8px;
+    border: 1px solid #393C49;
+    background: #2D303E;
+    padding: 14px 14px 14px 14px;
+
+}
+
+.food-card-totalprice {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.food-card-input {
+    background: #2D303E;
+    color: #889898;
+    margin-top: 10px;
+    width: 250px;
+    padding: 15px 14px 15px 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+}
+
+.food-card-inputButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.food-card-button {
+    width: 30px;
+    border-radius: 8px;
+    border: 1px solid #EA7C69;
+    background-color: transparent;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right:10px;
+   
+}
+
+.food-card-delete {
+    margin: 0 auto;
+}
