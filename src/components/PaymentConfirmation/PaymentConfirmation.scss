@@ -83,8 +83,8 @@
     overflow-y: auto;
     border-radius: 5px;
     padding: 10px;
-    -ms-overflow-style: none;  /* IE ve Edge için */
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .PaymentConfirmation-Subtotal {
