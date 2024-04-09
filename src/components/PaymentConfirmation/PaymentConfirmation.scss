@@ -79,6 +79,12 @@
     border-bottom: 1px solid #393C49;
     padding-top: 20px;
     padding-bottom: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 10px;
+    -ms-overflow-style: none;  /* IE ve Edge için */
+  scrollbar-width: none;
 }
 
 .PaymentConfirmation-Subtotal {

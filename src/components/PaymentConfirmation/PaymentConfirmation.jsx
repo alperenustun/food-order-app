@@ -12,7 +12,7 @@ const mockFoodData = [
   {
     id: 2,
     name: "Pizza",
-    price: 190,
+    price: 125,
     quantity: 2,
   },
   {
@@ -27,6 +27,13 @@ const mockFoodData = [
     price: 125,
     quantity: 2,
   }
+  ,
+  {
+    id: 1,
+    name: "Islak Hamburger",
+    price: 50,
+    quantity: 5,
+  }
 ];
 
 function PaymentConfirmation() {
@@ -40,7 +47,7 @@ function PaymentConfirmation() {
   return (
     <div className="PaymentConfirmation">
       <div className="PaymentConfirmation-box">
-      <h2 className="PaymentConfirmation-box-h2">Orders #34562</h2>
+        <h2 className="PaymentConfirmation-box-h2">Orders #34562</h2>
         <div className="PaymentConfirmation-Button-Box">
           <button className="PaymentConfirmation-Button">Dine In</button>
           <button className="PaymentConfirmation-Button">To Go</button>
@@ -54,7 +61,7 @@ function PaymentConfirmation() {
           </div>
         </div>
 
-        <div className="food-container">
+        <div className="food-container" style={{ maxHeight: '300px', overflowY: 'auto' }}>
           {foods.map((food) => (
             <ConfirmationFood key={food.id} food={food} onDelete={() => handleDeleteFood(food.id)} />
           ))}
