@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import "./CategoryTabs.scss";
-import { useState } from "react";
 
 function CategoryTabs() {
   const [activeTab, setActiveTab] = useState(1);
@@ -7,28 +7,28 @@ function CategoryTabs() {
   const tabs = [
     {
       id: 1,
-      name: "All Dishes",
+      name: "Category1",
     },
     {
       id: 2,
-      name: "Cold Dishes",
+      name: "Category2",
     },
     {
       id: 3,
-      name: "Soup",
+      name: "Category3",
     },
     {
       id: 4,
-      name: "Grill",
+      name: "Category4",
     },
     {
-      id:5,
-      name:"Appetizer",
+      id: 5,
+      name: "Category5",
     },
     {
-      id:6,
-      name:"Dessert",
-    }
+      id: 6,
+      name: "Category6",
+    },
   ];
 
   function handleTabClick(tabId) {
@@ -36,16 +36,18 @@ function CategoryTabs() {
   }
 
   return (
-    <div className="tab-container">
-      {tabs.map((tab, index) => (
-        <div
-          key={tab.id}
-          className={`tab ${activeTab === tab.id && "active-tab"}`}
-          onClick={() => handleTabClick(tab.id)}
-        >
-          {tab.name}
-        </div>
-      ))}
+    <div>
+      <ul>
+        {tabs.map((tab) => (
+          <li
+            key={tab.id}
+            className={`tab ${activeTab === tab.id ? "active-tab" : ""}`}
+            onClick={() => handleTabClick(tab.id)}
+          >
+            {tab.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
