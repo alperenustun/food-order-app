@@ -7,27 +7,27 @@ function CategoryTabs() {
   const tabs = [
     {
       id: 1,
-      name: "Category1",
+      name: "All Dishes",
     },
     {
       id: 2,
-      name: "Category2",
+      name: "Cold Dishes",
     },
     {
       id: 3,
-      name: "Category3",
+      name: "Soup",
     },
     {
       id: 4,
-      name: "Category4",
+      name: "Grill",
     },
     {
       id: 5,
-      name: "Category5",
+      name: "Appetizer",
     },
     {
       id: 6,
-      name: "Category6",
+      name: "Dessert",
     },
   ];
 
@@ -37,7 +37,7 @@ function CategoryTabs() {
 
   return (
     <div>
-      <ul>
+      <ul className="tabs-wrapper">
         {tabs.map((tab) => (
           <li
             key={tab.id}
