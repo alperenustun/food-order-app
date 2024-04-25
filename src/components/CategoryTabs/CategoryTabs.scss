@@ -1,5 +1,6 @@
+@import "../../styles/abstracts/variables";
 .tabs-wrapper {
-  border-bottom: 2px solid #464a5b;
+  border-bottom: 2px solid $primary-bg;
   margin: 30px 0;
 
   .tab {
@@ -8,19 +9,19 @@
     justify-content: center;
     align-items: center;
     padding: 18px 20px;
-    color: #fff;
+    color: $primary-font-color;
     transition:background-color 0.6s ease, transform 0.5s ease;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
     font-weight: 600;
 
     &:hover {
-      border-bottom: 2px solid #ff5500;
-      color: #ff5500;
+      border-bottom: 2px solid $accent-color;
+      color: $accent-color;
     }
   }
 
   .active-tab {
-    border-bottom: 2px solid #ff5500;
-    color: #ff5500;
+    border-bottom: 2px solid $accent-color;
+    color: $accent-color;
   }
 }
