@@ -1,6 +1,7 @@
 import Sidebar from "@/components/Sidebar/Sidebar";
 import "./HomePage.scss";
 import { useAuth } from "../../components/AuthProvider";
+import MostOrdered from "../../components/MostOrdered/MostOrdered";
 
 function HomePage() {
   const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
@@ -8,7 +9,7 @@ function HomePage() {
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <h1>Homepage example</h1>
+        <MostOrdered />
       </div>
     </div>
   );
