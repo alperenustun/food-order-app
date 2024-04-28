@@ -8,6 +8,7 @@ function calculateTotalPrice(food) {
 function ConfirmationFood({ food }) {
   const totalPrice = calculateTotalPrice(food);
 
+
   return (
     <div className="food-card">
       <div className="food-card-box-name">
