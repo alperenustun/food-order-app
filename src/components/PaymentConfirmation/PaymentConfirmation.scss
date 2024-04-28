@@ -1,4 +1,4 @@
-.PaymentConfirmation {
+.paymentConfirmation {
     background-color: #1F1D2B;
     width: 400px;
     margin-left: 20px;
@@ -6,14 +6,14 @@
     padding-top: 10px;
 }
 
-.PaymentConfirmation-box {
+.paymentConfirmation-box {
     width: 100%;
     margin: 20px auto 20px auto;
     padding: 10px;
     font-family: "Barlow", sans-serif;
 }
 
-.PaymentConfirmation-box-h2 {
+.paymentConfirmation-box-h2 {
     font-family: "Barlow", sans-serif;
     font-size: 20px;
     font-weight: 600;
@@ -23,7 +23,7 @@
 
 }
 
-.PaymentConfirmation-Button-Box {
+.paymentConfirmation-Button-Box {
     max-width: 230px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@
 
 }
 
-.PaymentConfirmation-Button {
+.paymentConfirmation-Button {
     background-color: transparent;
     color: #EA7C69;
     padding: 10px;
@@ -43,13 +43,13 @@
     font-size: 14px;
 }
 
-.PaymentConfirmation-Button:hover {
+.paymentConfirmation-Button:hover {
     background-color: #EA7C69;
     color: white;
 
 }
 
-.PaymentConfirmationtitle-h3 {
+.paymentConfirmationtitle-h3 {
     font-weight: 600;
     font-family: "Barlow", sans-serif;
     font-size: 16px;
@@ -58,7 +58,7 @@
 
 }
 
-.PaymentConfirmationtitle {
+.paymentConfirmationtitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +68,7 @@
 
 }
 
-.PaymentConfirmationtitle div {
+.paymentConfirmationtitle div {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -85,15 +85,18 @@
     padding: 10px;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    max-height: 300px;
+    overflow-y: auto;
+
 }
 
-.PaymentConfirmation-Subtotal {
+.paymentConfirmation-Subtotal {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.PaymentConfirmation-Subtotal-h3 {
+.paymentConfirmation-Subtotal-h3 {
     color: #ABBBC2;
     font-weight: 400;
     font-size: 14px;
@@ -106,7 +109,7 @@
     color: white;
 }
 
-.PaymentConfirmation-button-payment {
+.paymentConfirmation-button-payment {
     margin: 20px 0px 20px 0px;
     width: 100%;
     padding: 14px;
