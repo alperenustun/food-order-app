@@ -43,6 +43,13 @@ function PaymentConfirmation() {
     const updatedFoods = foods.filter(food => food.id !== foodId);
     setFoods(updatedFoods);
   };
+  const totalPrice = useMemo(() => {
+    const price = mockFoodData.reduce(
+      (acc, food) => acc + food.price * food.quantity,
+      0
+    );
+    return price;
+  }, [mockFoodData]);
 
   return (
     <div className="paymentConfirmation">
@@ -61,7 +68,7 @@ function PaymentConfirmation() {
           </div>
         </div>
 
-        <div className="food-container" style={{ maxHeight: '300px', overflowY: 'auto' }}>
+        <div className="food-container">
           {foods.map((food) => (
             <ConfirmationFood key={food.id} food={food} onDelete={() => handleDeleteFood(food.id)} />
           ))}
