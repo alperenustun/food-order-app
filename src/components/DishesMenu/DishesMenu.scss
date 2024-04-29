@@ -1,63 +1,51 @@
-$primary-color: #1F1D2B;
-$secondary-color: #FFFF;
-$gap: 30px;
-$max-width: 900px;
-$margin: 100px 70px;
-$padding: 20px;
-$box-padding: 20px;
-$box-width: calc(33.33% - #{$box-padding * 2}); 
-$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-$border-radius: 10px;
-$box-height: 300px;
-$description-margin: 200px;
+@import "../../styles/abstracts/variables";
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
-  gap: $gap;
-  max-width: $max-width; 
-  margin: $margin; 
-  padding: $padding; 
+  align-items: center;
+  padding: 50px;
+  gap: 30px;
+  margin: 100px auto 50px 50px;
+
+  .box {
+    background-color: $secondary-bg;
+    padding: 20px;
+    box-shadow: 0 2px 4px $primary-bg;
+    text-align: center;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    margin-top: 20px;
+
+    .description {
+      font-family: $primary-font;
+      margin: 20px;
+    }
+
+    .price {
+      color: $primary-font-color;
+    }
+
+    .box-image {
+      transform: translateY(-50px);
+    }
+  }
 }
 
-.box {
-  background-color: $primary-color;
-  padding: $box-padding;
-  width: $box-width;
-  list-style: none;
-  box-shadow: $box-shadow;
-  text-align: center;
-  border-radius: $border-radius;
-  height: $box-height;
-
-  .box-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .description {
-    font-weight: bold;
-    margin-top: $description-margin;
-  }
-
-  .price {
-    color: $secondary-color;
-  }
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-option {
   width: 100px;
   height: 40px;
-  background-color: $primary-color;
-  color: $secondary-color;
+  background-color: $secondary-bg;
+  color: $primary-font-color;
   border: none;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999; 
+  border-radius: 10px;
+  box-shadow: 0 2px 4px $secondary-bg;
 }
