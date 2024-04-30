@@ -43,14 +43,7 @@ function PaymentConfirmation() {
     const updatedFoods = foods.filter(food => food.id !== foodId);
     setFoods(updatedFoods);
   };
-  const totalPrice = useMemo(() => {
-    const price = mockFoodData.reduce(
-      (acc, food) => acc + food.price * food.quantity,
-      0
-    );
-    return price;
-  }, [mockFoodData]);
-
+  
   return (
     <div className="paymentConfirmation">
       <div className="paymentConfirmation-box">

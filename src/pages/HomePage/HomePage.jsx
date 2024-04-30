@@ -9,8 +9,11 @@ function HomePage() {
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <h1>Homepage example</h1>
-        <PaymentConfirmation />
+        <h1 className="homePagetext" >Homepage example</h1>
+        <div className="paymentConfirmation">
+          <PaymentConfirmation />
+        </div>
+
       </div>
     </div>
   );
