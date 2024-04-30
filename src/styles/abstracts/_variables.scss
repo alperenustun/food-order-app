@@ -5,11 +5,22 @@ $primary-font-color: #fff;
 
 $button-shadow: 0 8px 24px #eb7d6a32, 0 0 8px #EA7C69;
 
-$linear-color: linear-gradient(
-  to bottom right,
-  rgba(186, 186, 251, 1),
-  rgba(237, 145, 167, 1),
-  rgba(241, 169, 96, 1)
-);
+$linear-color: linear-gradient(to bottom right,
+    rgba(186, 186, 251, 1),
+    rgba(237, 145, 167, 1),
+    rgba(241, 169, 96, 1));
 
-$primary-font: "Outfit", sans-serif;
+$font-color-white: #ffffff;
+$font-color-light: #ABBBC2;
+$orange-color: #ff8e42;
+$black-color: #000000;
+
+$completed-color: #2ecc71;
+$preparing-color: #3498db;
+$pending-color: #e67e22;
+
+$dashboard-divs: #1F1D2B;
+
+$button-shadow: 0 8px 24px #eb7d6a32, 0 0 8px #EA7C69;
+
+$primary-font: "Barlow", sans-serif;
