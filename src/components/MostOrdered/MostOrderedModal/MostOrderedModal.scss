@@ -1,0 +1,44 @@
+@use "../../../styles/abstracts/variables" as *;
+
+.mainContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black-color(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innerCont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border-radius: 20px;
+        color: black;
+        padding: 20px;
+        align-items: center;
+
+        h1 {
+            color: $black-color;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 500;
+            color: $black-color;
+            line-height: 25px;
+        }
+
+        button {
+            background-color: $black-color;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+            border-radius: 10px;
+        }
+    }
+}
