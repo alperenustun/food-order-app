@@ -1,3 +1,9 @@
+import spicyImage from "@/assets/images/spicy.png";
+import saltedImage from "@/assets/images/salted.svg";
+import beefImage from "@/assets/images/foo.png";
+import healtImage from "@/assets/images/healt.png";
+import instImage from "@/assets/images/instant.png";
+import seeImage from "@/assets/images/seafood.png";
 export const foods = [
     {
         id: 1,

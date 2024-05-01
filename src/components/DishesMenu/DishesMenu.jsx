@@ -1,15 +1,6 @@
 import React from "react";
 import "./DishesMenu.scss";
-import "../foods/foods.js";
-
-import spicyImage from "@/assets/images/spicy.png";
-import saltedImage from "@/assets/images/salted.svg";
-import beefImage from "@/assets/images/foo.png";
-import healtImage from "@/assets/images/healt.png";
-import instImage from "@/assets/images/instant.png";
-import seeImage from "@/assets/images/seafood.png";
-
-function DishesMenu(filteredDishes) {
+function DishesMenu({ filteredDishes }) {
 
     return (
         <div>

@@ -3,13 +3,13 @@ import "./HomePage.scss";
 import { useAuth } from "../../components/AuthProvider";
 import DishesMenu from "@/components/DishesMenu/DishesMenu";
 import { useState } from "react";
-import { foods } from "../../components/foods/foods";
+import { foods } from "../../assets/data/foods";
 
 function HomePage() {
   const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
  
- const [dishes,setDishes] = useState([foods]);
- const[filteredDishes,setFilteredDishes] = useState([foods]);
+ const [dishes,setDishes] = useState(foods);
+ const[filteredDishes,setFilteredDishes] = useState(foods);
  
  
   return (
