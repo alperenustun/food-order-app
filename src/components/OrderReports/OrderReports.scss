@@ -1,11 +1,11 @@
 @use "../../styles/abstracts/variables" as *;
 
 .order-report-container {
-    color: $font-color;
-    padding: 20px;
+    color: $font-color-white;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #1F1D2B;
+    background-color: $secondary-bg;
 
     .order-report-header {
         display: flex;
@@ -13,8 +13,7 @@
         align-items: center;
         margin-bottom: 20px;
 
-        .order-report-h1 {
-            font-family: "Barlow", sans-serif;
+        .order-report-title {
             font-weight: 600;
         }
     }
@@ -25,15 +24,14 @@
         border-radius: 8px;
         overflow: hidden;
 
-        .order-report-th {
+        .order-report-order-report-title {
             padding: 15px;
             text-align: left;
-            font-family: "Barlow", sans-serif;
             font-weight: 600;
         }
 
-        .order-report-td {
-            padding: 15px;
+        .order-report-table-data {
+            padding: 15px 0 26px;
             text-align: left;
         }
 
@@ -42,43 +40,38 @@
 
         }
 
-        .order-tbody {
+        .order-table-body {
+
             .order-body-tr {
                 border: none;
 
-                .order-report-td {
+                .order-report-table-data {
                     vertical-align: middle;
-                    font-family: "Barlow", sans-serif;
                     font-weight: 200;
                     text-align: center;
 
                     .order-status {
                         padding: 5px 10px;
                         border-radius: 16px;
-                        color: $font-color;
+                        color: $font-color-white;
                         font-weight: 600;
                         text-align: center;
-                        font-family: "Barlow", sans-serif;
                         font-weight: 200;
 
                         .order-status-opacitylow {
                             opacity: 1;
                         }
 
-
                         &.completed {
                             background-color: $completed-color;
-                            font-family: "Barlow", sans-serif;
                         }
 
                         &.preparing {
                             background-color: $preparing-color;
-                            font-family: "Barlow", sans-serif;
                         }
 
                         &.pending {
                             background-color: $pending-color;
-                            font-family: "Barlow", sans-serif;
                         }
                     }
                 }
@@ -86,15 +79,14 @@
         }
     }
 
-    .filter-order-btn {
+    .filter-order-btn-for-order-report {
         background: none;
-        font-family: "Barlow", sans-serif;
         border: 1px solid rgb(141, 141, 141);
         border-radius: 4px;
         color: $font-color;
         cursor: pointer;
 
-        .filter-order-btn-img {
+        .filter-order-btn-img-for-order-report {
             width: 20px;
             height: 20px;
             position: relative;
@@ -102,18 +94,10 @@
             left: 15px;
             margin-right: 9px;
         }
-
-        &:hover {
-            background-color: darken(rgb(141, 141, 141), 10%);
-        }
-
-        &:active {
-            background-color: darken(rgb(141, 141, 141), 20%);
-        }
     }
 }
 
-.customer-info {
+.customer-info-order-report {
     display: flex;
     gap: 20px;
     text-align: center;
@@ -121,18 +105,15 @@
 }
 
 .filter-order-select {
-    background-color: #1F1D2B;
-    color: #ffffff;
+    background-color: $dashboard-divs;
+    color: $font-color-white;
     border: none;
     cursor: pointer;
     padding: 15px;
     text-align: center;
     -webkit-appearance: none;
-    /* Chrome, Safari, Opera için */
     -moz-appearance: none;
-    /* Firefox için */
     appearance: none;
-    /* Standart özellik */
     border-radius: 5px;
 
 }
@@ -144,4 +125,44 @@
 .filter-order-select:active {
     background-color: #37334d;
 
+}
+
+@media (max-width: 700px) {
+    .order-report-container {
+        padding: 10px;
+
+        .order-reports-table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .filter-order-btn-for-order-report {
+            display: flex;
+
+            .filter-order-btn-img-for-order-report {
+                position: relative;
+                top: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .order-report-container {
+        .order-report-header {
+            display: flex;
+            flex-direction: column;
+
+            .order-report-title {
+                margin-bottom: 10px;
+                font-size: 25px;
+            }
+
+            .filter-order-select {
+                width: 74px;
+            }
+        }
+    }
 }
