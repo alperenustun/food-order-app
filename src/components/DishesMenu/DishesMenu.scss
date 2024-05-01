@@ -2,12 +2,11 @@
 
 .boxes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   justify-content: center;
   align-items: center;
-  padding: 50px;
   gap: 30px;
-  margin: 100px auto 50px 50px;
+  margin-top: 50px;
 
   .box {
     background-color: $secondary-bg;
@@ -15,8 +14,9 @@
     box-shadow: 0 2px 4px $primary-bg;
     text-align: center;
     border-radius: 10px;
-    width: 250px;
     height: 300px;
+   
+    
     margin-top: 20px;
 
     .description {
