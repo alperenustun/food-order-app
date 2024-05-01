@@ -1,42 +1,45 @@
 @use "../../../styles/abstracts/variables" as *;
 
-.mainContainer {
+.mainContainer-of-most-order-modal {
     position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: $black-color(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .innerCont {
+    .innerCont-of-most-order-modal {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: white;
+        background-color: $font-color-white;
         border-radius: 20px;
-        color: black;
+        color: $secondary-bg;
         padding: 20px;
         align-items: center;
 
-        h1 {
+        .most-order-modal-header {
             color: $black-color;
         }
 
-        h3 {
+        .food-title-most-ordered-modal {
             font-size: 15px;
             font-weight: 500;
             color: $black-color;
             line-height: 25px;
         }
 
-        button {
-            background-color: $black-color;
+        .most-ordered-modal-btn {
+            background-color: $secondary-bg;
             border: none;
+            color: $font-color-white;
             cursor: pointer;
+            margin-top: 15px;
+            height: 40px;
             width: 100px;
             border-radius: 10px;
         }
