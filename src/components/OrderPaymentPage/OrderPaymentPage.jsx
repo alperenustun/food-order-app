@@ -26,7 +26,6 @@ function OrderPaymentPage() {
         let cardNumber = input.replace(/\D/g, '');
         cardNumber = cardNumber.slice(0, 16);
         cardNumber = cardNumber.replace(/(.{4})/g, '$1 ');
-        console.log(cardNumber, "cardNumber");
         return cardNumber.trim();
     };
 
@@ -50,32 +49,21 @@ function OrderPaymentPage() {
         return formattedName;
     };
 
+    const formatInput = (name, value) => {
+        const formatters = {
+            cardNumber: formatCardNumber,
+            cardHolderName: formatCardHolderName,
+            cvv: formatCvv,
+            tableNo: formatTableNo
+        };
+
+        return formatters[name] ? formatters[name](value) : value;
+    };
+
     const handleInputChange = (e) => {
-        let { name, value } = e.target;
-
-        if (name === 'cardNumber') {
-            value = formatCardNumber(value);
-            setFormData({ ...formData, [name]: value });
-
-        }
-        else if (name === 'cardHolderName') {
-            value = formatCardHolderName(value);
-            setFormData({ ...formData, [name]: value });
-        }
-        else if (name === 'cvv') {
-            value = formatCvv(value);
-            setFormData({ ...formData, [name]: value });
-        }
-        else if (name === 'tableNo') {
-            value = formatTableNo(value);
-            setFormData({ ...formData, [name]: value });
-        }
-        else if (name === 'PaymentOption') {
-            setFormData({ ...formData, [name]: value });
-        }
-        else if (name === 'orderType') {
-            setFormData({ ...formData, [name]: value });
-        }
+        const { name, value } = e.target;
+        const formattedValue = formatInput(name, value);
+        setFormData({ ...formData, [name]: formattedValue });
     };
 
     const handleOptionChange = (e) => {
@@ -99,7 +87,6 @@ function OrderPaymentPage() {
     const handleSelectChange = (e) => {
         setSelectedDropDownOption(e.target.value);
         setFormData({ ...formData, OrderType: e.target.value });
-        console.log(e.target.value);
     };
 
     const handleCancel = () => {
@@ -137,7 +124,7 @@ function OrderPaymentPage() {
             <h1 className="payment-head">Payment</h1>
 
             <p className="payment-explanations">3 payment method available</p>
-            <div className="line-form"></div>
+            <div className="line-form-payment-page"></div>
 
             <h2 className="payment-methods-text">Payment Methods</h2>
             <form className="payment-form-area">
@@ -189,7 +176,7 @@ function OrderPaymentPage() {
                                 className="half-width-input" name="cvv" value={formData.cvv} onChange={handleInputChange} />
                         </div>
                     </div>
-                    <div className="line-form"></div>
+                    <div className="line-form-payment-page"></div>
                     <div className="double-form-type-payment">
                         <div className="first-double-type-payment">
 
