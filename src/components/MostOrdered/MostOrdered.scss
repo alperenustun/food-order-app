@@ -131,7 +131,7 @@
     }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 520px) {
     .order-conf-main {
         width: 86%;
 
@@ -141,9 +141,18 @@
             margin-bottom: 15px;
             padding-bottom: 10px;
             justify-content: center;
+            flex-direction: column;
 
             .part-of-title-conf {
+                display: flex;
                 align-items: center;
+                flex-direction: column;
+
+                .order-types-period {
+                    position: relative;
+                    width: 81px;
+                    height: 33px;
+                }
             }
         }
 
