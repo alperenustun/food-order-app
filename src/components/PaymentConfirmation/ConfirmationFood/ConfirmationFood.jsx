@@ -10,21 +10,21 @@ function ConfirmationFood({ food }) {
 
 
   return (
-    <div className="food-card">
-      <div className="food-card-box-name">
-        <div className="food-card-name">
-          <h3 className="food-card-name-h3">{food.name}</h3>
-          <p className="food-card-name-price">$ {food.price}</p>
+    <div className="foodCard">
+      <div className="foodCardBoxName">
+        <div className="foodCardName">
+          <h3 className="foodCardName-h3">{food.name}</h3>
+          <p className="foodCardNameprice">$ {food.price}</p>
         </div>
-        <div className="food-card-totalprice">
-          <p className="food-card-name-quantity">{food.quantity}</p>
-          <p className="food-card-totalprice-p">$ {totalPrice}</p>
+        <div className="foodCardTotalprice">
+          <p className="foodCardNamequantity">{food.quantity}</p>
+          <p className="foodCardTotalprice-p">$ {totalPrice}</p>
         </div>
       </div>
-      <div className="food-card-inputButtonContainer">
-        <input className="food-card-input" type="text" placeholder="Order Note..."></input>
-        <button className="food-card-button">
-          <img className="food-card-delete" src="src/components/PaymentConfirmation/ConfirmationFood/images/Trash.svg" alt="Trash.svg" />
+      <div className="foodCardİnputButtonContainer">
+        <input className="foodCardinput" type="text" placeholder="Order Note..."></input>
+        <button className="foodCardbutton">
+          <img className="foodCarddelete" src="@/../public/Trash.svg" alt="Trash.svg" />
         </button>
       </div>
     </div>
