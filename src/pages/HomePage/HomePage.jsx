@@ -8,6 +8,7 @@ function HomePage() {
     <div>
 
       <Sidebar />
+
       <div className="mainRoot">
 
       </div>
