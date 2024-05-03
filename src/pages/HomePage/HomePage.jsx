@@ -6,6 +6,7 @@ function HomePage() {
   const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
   return (
     <div>
+
       <Sidebar />
 
       <div className="mainRoot">
