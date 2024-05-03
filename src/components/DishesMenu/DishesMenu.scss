@@ -1,14 +1,14 @@
 @import "../../styles/abstracts/variables";
 
-.boxes {
+.dishes-boxes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
   align-items: center;
   gap: 30px;
   margin-top: 50px;
 
-  .box {
+  .dishes-box {
     background-color: $secondary-bg;
     padding: 20px;
     box-shadow: 0 2px 4px $primary-bg;
@@ -19,28 +19,28 @@
     
     margin-top: 20px;
 
-    .description {
+    .dishes-description {
       font-family: $primary-font;
       margin: 20px;
     }
 
-    .price {
+    .dishes-price {
       color: $primary-font-color;
     }
 
-    .box-image {
+    .dishes-box-image {
       transform: translateY(-50px);
     }
   }
 }
 
-.title {
+.dishes-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.btn-option {
+.dishes-btn-select {
   width: 100px;
   height: 40px;
   background-color: $secondary-bg;
