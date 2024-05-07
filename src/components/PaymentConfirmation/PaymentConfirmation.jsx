@@ -44,6 +44,9 @@ function PaymentConfirmation() {
     setFoods(updatedFoods);
   };
 
+  const totalPrice = mockFoodData.reduce((acc, food) => acc + food.price * food.quantity, 0)
+
+
   return (
     <div className="payment-confirmation">
       <div className="payment-confirmation-box">
@@ -72,7 +75,7 @@ function PaymentConfirmation() {
         </div>
         <div className="payment-confirmation-subtotal">
           <h3 className="payment-confirmation-subtotal-title3">Sub total</h3>
-          <h3 className="payment-confirmation-subtotal-value">$ {mockFoodData.reduce((acc, food) => acc + food.price * food.quantity, 0)}</h3>
+          <h3 className="payment-confirmation-subtotal-value">$ {totalPrice}</h3>
         </div>
         <button className="payment-confirmation-buttonpayment">Continue to Payment</button>
 
