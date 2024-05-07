@@ -1,28 +1,28 @@
 @import "../../styles/abstracts/variables";
 
 .tabs-wrapper {
-    border-bottom: 2px solid $primary-bg;
-    margin: 30px 0;
+  border-bottom: 2px solid $primary-bg;
+  margin: 30px 0;
 
-    .tab {
-        cursor: pointer;
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        padding: 18px 20px;
-        color: $primary-font-color;
-        transition: background-color 0.6s ease, transform 0.5s ease;
-        font-family: $primary-font;
-        font-weight: 600;
+  .tab {
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    color: $primary-font-color;
+    transition: background-color 0.6s ease, transform 0.5s ease;
+    font-family: $primary-font;
+    font-weight: 600;
 
-        &:hover {
-            border-bottom: 2px solid $accent-color;
-            color: $accent-color;
-        }
+    &:hover {
+      border-bottom: 2px solid $accent-color;
+      color: $accent-color;
     }
+  }
 
-    .active-tab {
-        border-bottom: 2px solid $accent-color;
-        color: $accent-color;
-    }
+  .active-tab {
+    border-bottom: 2px solid $accent-color;
+    color: $accent-color;
+  }
 }
