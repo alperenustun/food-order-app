@@ -10,7 +10,7 @@ export const foods = [
         image: spicyImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
-
+        category:"Cold Dishes"
 
     },
     {
@@ -18,47 +18,55 @@ export const foods = [
         image: saltedImage,
         description: "Salted pasta with mushroom sauce",
         price: "$ 2.29",
+        category:"Cold Dishes"
     },
     {
         id: 3,
         image: beefImage,
         description: "Beef dumpling in hot and sour soup",
         price: "$ 2.29",
+        category:"Soup"
     },
     {
         id: 4,
         image: healtImage,
         description: "Healthy noodle with spinach leaf",
         price: "$ 2.29",
+        category:"Soup"
     },
     {
         id: 5,
         image: healtImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
+        category:"Grill"
     },
     {
         id: 6,
         image: instImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
+        category:"Grill"
     },
     {
         id: 7,
         image: seeImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
+        category:"Appetizer"
     },
     {
         id: 8,
         image: saltedImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
+        category:"Dessert"
     },
     {
         id: 9,
         image: instImage,
         description: "Spicy seasoned seafood noodles",
         price: "$ 2.29",
+        category:"Dessert"
     },
 ];
