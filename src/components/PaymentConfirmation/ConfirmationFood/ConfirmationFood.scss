@@ -1,36 +1,38 @@
-.foodCardBoxName {
+@import "@/styles/abstracts/variables.scss";
+
+.food-card-box-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.foodCardName {
+.food-card-name {
     display: flex;
     flex-direction: column;
     padding: 14px 14px 14px 14px;
     gap: 5px;
 }
 
-.foodCardName-h3 {
+.food-card-name-title3 {
     font-size: 14px;
 }
 
-.foodCardNameprice {
+.food-card-name-price {
     font-size: 12px;
-    color: #ABBBC2;
+    color: $primary-bg;
     gap: 5px;
 }
 
-.foodCardNamequantity {
+.food-card-name-quantity {
     border-radius: 8px;
-    border: 1px solid #393C49;
-    background: #2D303E;
+    border: 1px solid $primary-bg;
+    background: $primary-bg;
     padding: 14px 14px 14px 14px;
 
 }
 
-.foodCardTotalprice {
+.food-card-total-price {
     width: 90px;
     display: flex;
     justify-content: space-between;
@@ -39,13 +41,13 @@
 
 }
 
-.foodCardTotalprice-p {
+.food-car-total-price-p {
     display: flex;
 }
 
-.foodCardinput {
-    background: #2D303E;
-    color: #889898;
+.food-card-ınput {
+    background: $primary-bg;
+    color: $primary-bg;
     margin-top: 10px;
     width: 250px;
     padding: 15px 14px 15px 14px;
@@ -55,16 +57,16 @@
 
 }
 
-.foodCardİnputButtonContainer {
+.food-card-ınputbuttoncontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.foodCardbutton {
+.food-card-button {
     border-radius: 8px;
-    border: 1px solid #EA7C69;
+    border: 1px solid $accent-color;
     background-color: transparent;
     padding: 10px;
 

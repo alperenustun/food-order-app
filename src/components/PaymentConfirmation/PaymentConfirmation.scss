@@ -1,15 +1,17 @@
-.paymentConfirmation {
-    background-color: #1F1D2B;
+@import "src/styles/abstracts/_variables.scss";
+
+.payment-confirmation {
+    background-color: $secondary-bg;
     padding: 10px 10px 10px 10px;
 }
 
-.paymentConfirmationBox {
+.payment-confirmation-box {
     width: 100%;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
 }
 
-.paymentConfirmationBoxTitle2 {
-    font-family: "Barlow", sans-serif;
+.payment-confirmation-box-title2 {
+    font-family: $primary-font;
     font-size: 20px;
     font-weight: 600;
     line-height: 28px;
@@ -18,42 +20,42 @@
 
 }
 
-.paymentConfirmation-Button-Box {
+.payment-confirmation-button-box {
     max-width: 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
 
 }
 
-.paymentConfirmation-Button {
+.payment-confirmation-button {
     background-color: transparent;
-    color: #EA7C69;
+    color: $accent-color;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #393C49;
-    font-family: "Barlow", sans-serif;
+    border: 2px solid $primary-bg;
+    font-family: $primary-font;
     font-weight: 600;
     font-size: 14px;
 }
 
-.paymentConfirmation-Button:hover {
-    background-color: #EA7C69;
-    color: white;
+.payment-confirmation-button:hover {
+    background-color: $accent-color;
+    color: $primary-font-color;
 
 }
 
-.paymentConfirmationtitle-title3 {
+.payment-confirmationtitle-title3 {
     font-weight: 600;
-    font-family: "Barlow", sans-serif;
+    font-family: $primary-font;
     font-size: 16px;
     font-weight: 600;
     line-height: 22.4px;
 
 }
 
-.paymentConfirmationtitle {
+.payment-confirmation-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,15 +65,15 @@
 
 }
 
-.paymentConfirmationtitle div {
+.payment-confirmation-title div {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.foodContainer {
-    border-top: 1px solid #393C49;
-    border-bottom: 1px solid #393C49;
+.food-container {
+    border-top: 1px solid $primary-bg;
+    border-bottom: 1px solid $primary-bg;
     padding-top: 20px;
     padding-bottom: 10px;
     max-height: 300px;
@@ -85,35 +87,35 @@
 
 }
 
-.paymentConfirmation-Subtotal {
+.payment-confirmation-subtotal {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.paymentConfirmation-Subtotal-title3 {
-    color: #ABBBC2;
+.payment-confirmation-subtotal-title3 {
+    color: $primary-bg;
     font-weight: 400;
     font-size: 14px;
 
 }
 
-.PaymentConfirmation-Subtotal-value {
+.payment-confirmation-subtotal-value {
     font-weight: 500;
     font-size: 16px;
-    color: white;
+    color: $primary-font-color;
 }
 
-.paymentConfirmationButtonpayment {
+.payment-confirmation-buttonpayment {
     margin: 20px 0px 20px 0px;
     width: 100%;
     padding: 14px;
     border-radius: 8px;
-    background: #EA7C69;
-    font-family: "Barlow", sans-serif;
+    background: $accent-color;
+    font-family: $primary-font;
     font-weight: 600;
     font-size: 14px;
-    color: white;
+    color: $primary-font-color;
     border: none;
 
 

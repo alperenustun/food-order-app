@@ -45,36 +45,36 @@ function PaymentConfirmation() {
   };
 
   return (
-    <div className="paymentConfirmation">
-      <div className="paymentConfirmationBox">
-        <h2 className="paymentConfirmationBoxTitle2">Orders #34562</h2>
-        <div className="paymentConfirmation-Button-Box">
-          <button className="paymentConfirmation-Button">Dine In</button>
-          <button className="paymentConfirmation-Button">To Go</button>
-          <button className="paymentConfirmation-Button">Delivery</button>
+    <div className="payment-confirmation">
+      <div className="payment-confirmation-box">
+        <h2 className="payment-confirmation-box-title2">Orders #34562</h2>
+        <div className="payment-confirmation-button-box">
+          <button className="payment-confirmation-button">Dine In</button>
+          <button className="payment-confirmation-button">To Go</button>
+          <button className="payment-confirmation-button">Delivery</button>
         </div>
-        <div className="paymentConfirmationtitle">
-          <h3 className="paymentConfirmationtitle-title3">Item</h3>
+        <div className="payment-confirmation-title">
+          <h3 className="payment-confirmationtitle-title3">Item</h3>
           <div>
             <h3 className="paymentConfirmationtitle-title3">Qty</h3>
             <h3 className="paymentConfirmationtitle-title3">Item</h3>
           </div>
         </div>
 
-        <div className="foodContainer">
+        <div className="food-container">
           {foods.map((food) => (
             <ConfirmationFood key={food.id} food={food} onDelete={() => handleDeleteFood(food.id)} />
           ))}
         </div>
-        <div className="paymentConfirmation-Subtotal">
-          <h3 className="paymentConfirmation-Subtotal-title3">Discount</h3>
-          <h3 className="paymentConfirmation-Subtotal-value">$ 0</h3>
+        <div className="payment-confirmation-subtotal">
+          <h3 className="payment-confirmation-subtotal-title3">Discount</h3>
+          <h3 className="payment-confirmation-subtotal-value">$ 0</h3>
         </div>
-        <div className="paymentConfirmation-Subtotal">
-          <h3 className="paymentConfirmation-Subtotal-title3">Sub total</h3>
-          <h3 className="paymentConfirmation-Subtotal-value">$ {mockFoodData.reduce((acc, food) => acc + food.price * food.quantity, 0)}</h3>
+        <div className="payment-confirmation-subtotal">
+          <h3 className="payment-confirmation-subtotal-title3">Sub total</h3>
+          <h3 className="payment-confirmation-subtotal-value">$ {mockFoodData.reduce((acc, food) => acc + food.price * food.quantity, 0)}</h3>
         </div>
-        <button className="paymentConfirmationButtonpayment">Continue to Payment</button>
+        <button className="payment-confirmation-buttonpayment">Continue to Payment</button>
 
       </div>
     </div>
