@@ -1,0 +1,124 @@
+@import "src/styles/abstracts/_variables.scss";
+
+.payment-confirmation {
+    background-color: $secondary-bg;
+    padding: 10px 10px 10px 10px;
+    height: 100%;
+}
+
+.payment-confirmation-box {
+    width: 100%;
+    font-family: $primary-font;
+}
+
+.payment-confirmation-box-title2 {
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+
+.payment-confirmation-button-box {
+    max-width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $primary-font;
+
+}
+
+.payment-confirmation-button {
+    background-color: transparent;
+    color: $accent-color;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid $primary-bg;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.payment-confirmation-button:hover {
+    background-color: $accent-color;
+    color: $primary-font-color;
+
+}
+
+.payment-confirmationtitle-title3 {
+    font-weight: 600;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+
+}
+
+.payment-confirmation-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+
+}
+
+.payment-confirmation-title div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.food-container {
+    border-top: 1px solid $primary-bg;
+    border-bottom: 1px solid $primary-bg;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
+.payment-confirmation-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.payment-confirmation-subtotal-title3 {
+    color: $primary-bg;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+.payment-confirmation-subtotal-value {
+    font-weight: 500;
+    font-size: 16px;
+    color: $primary-font-color;
+}
+
+.payment-confirmation-buttonpayment {
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    background: $accent-color;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 14px;
+    color: $primary-font-color;
+    border: none;
+
+
+
+}
