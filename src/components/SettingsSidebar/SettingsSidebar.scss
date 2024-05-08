@@ -1,0 +1,136 @@
+@use "@/styles/abstracts/variables" as *;
+
+.settings-sidebar-main {
+    display: flex;
+    flex-direction: column;
+    color: $font-color-white;
+    // margin: 30px 0px 0px 130px;
+    width: 20%;
+    background-color: $dashboard-divs;
+    padding-bottom: 100px;
+    border-radius: 20px;
+
+    #appearance-nav-id {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    #about-nav-id {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .sidebar-div {
+        display: flex;
+        background-color: $dashboard-divs;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 10px 30px 20px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $accent-color;
+        }
+
+        .sidebar-btn-class {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .settings-sidebar-title {
+            color: $font-color-light;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            padding-left: 25px;
+            padding-right: 15px;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 18.2px;
+            text-align: left;
+            padding-right: 15px;
+            color: $font-color-white;
+            margin-bottom: 8px;
+
+            .settings-sidebar-img {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+
+    .sidebar-div-active {
+        background-color: rgba(234, 124, 105, 0.26);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 0px 38px 20px;
+        border: none;
+        gap: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        .sidebar-btn-class {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: flex-start;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 18.2px;
+            text-align: left;
+            padding-right: 15px;
+            color: $accent-color;
+
+            .settings-sidebar-img {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        .settings-sidebar-title {
+            padding-left: 25px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16.8px;
+            text-align: left;
+            padding-right: 15px;
+            color: $accent-color;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .settings-sidebar-main {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: 20px;
+        gap: 10px;
+        width: 100%;
+
+        .sidebar-div {
+            padding: 10px;
+        }
+    }
+}
