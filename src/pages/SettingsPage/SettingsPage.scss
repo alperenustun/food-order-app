@@ -1,0 +1,34 @@
+@use "../../styles/abstracts/variables" as *;
+
+.settings-page {
+    display: flex;
+    flex-direction: row;
+    color: $font-color-white;
+    background-color: $primary-bg;
+    font-family: "Barlow", sans-serif;
+
+    .set-product-div {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 28px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .settings-page {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .set-product-div {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-size: 11px;
+                padding: 0px;
+            }
+        }
+    }
+}

@@ -1,9 +1,15 @@
-import "./SettingsPage.scss";
+import "../SettingsPage/SettingsPage.scss";
+import SettingsSidebar from "../../components/SettingsSidebar/SettingsSidebar";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 function SettingsPage() {
+
   return (
     <main className="settings-page">
-      <h1>Settings Page</h1>
+      <Sidebar />
+      <div className="set-product-div">
+        <SettingsSidebar />
+      </div>
     </main>
   );
 }
