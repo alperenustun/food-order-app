@@ -2,12 +2,5 @@
 
 .mainRoot {
   @extend %main-container;
-  display: flex;
-
-
-
-}
-
-.homePagetext {
-  width: 80%;
+  position: relative;
 }
