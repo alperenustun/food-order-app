@@ -59,8 +59,8 @@ function PaymentConfirmation() {
         <div className="payment-confirmation-title">
           <h3 className="payment-confirmationtitle-title3">Item</h3>
           <div>
-            <h3 className="paymentConfirmationtitle-title3">Qty</h3>
-            <h3 className="paymentConfirmationtitle-title3">Item</h3>
+            <h3 className="payment-confirmationtitle-title3">Qty</h3>
+            <h3 className="payment-confirmationtitle-title3">Item</h3>
           </div>
         </div>
 
