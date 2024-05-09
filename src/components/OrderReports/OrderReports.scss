@@ -1,0 +1,168 @@
+@use "../../styles/abstracts/variables" as *;
+
+.order-report-container {
+    color: $font-color-white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: $secondary-bg;
+
+    .order-report-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .order-report-title {
+            font-weight: 600;
+        }
+    }
+
+    .order-reports-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+
+        .order-report-order-report-title {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .order-report-table-data {
+            padding: 15px 0 26px;
+            text-align: left;
+        }
+
+        .border-line-order-report {
+            border-bottom: 2px solid #585858;
+
+        }
+
+        .order-table-body {
+
+            .order-body-tr {
+                border: none;
+
+                .order-report-table-data {
+                    vertical-align: middle;
+                    font-weight: 200;
+                    text-align: center;
+
+                    .order-status {
+                        padding: 5px 10px;
+                        border-radius: 16px;
+                        color: $font-color-white;
+                        font-weight: 600;
+                        text-align: center;
+                        font-weight: 200;
+
+                        .order-status-opacitylow {
+                            opacity: 1;
+                        }
+
+                        &.completed {
+                            background-color: $completed-color;
+                        }
+
+                        &.preparing {
+                            background-color: $preparing-color;
+                        }
+
+                        &.pending {
+                            background-color: $pending-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-order-btn-for-order-report {
+        background: none;
+        border: 1px solid rgb(141, 141, 141);
+        border-radius: 4px;
+        color: $font-color;
+        cursor: pointer;
+
+        .filter-order-btn-img-for-order-report {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 2px;
+            left: 15px;
+            margin-right: 9px;
+        }
+    }
+}
+
+.customer-info-order-report {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.filter-order-select {
+    background-color: $dashboard-divs;
+    color: $font-color-white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+
+}
+
+.filter-order-select:focus {
+    outline: none;
+}
+
+.filter-order-select:active {
+    background-color: #37334d;
+
+}
+
+@media (max-width: 700px) {
+    .order-report-container {
+        padding: 10px;
+
+        .order-reports-table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .filter-order-btn-for-order-report {
+            display: flex;
+
+            .filter-order-btn-img-for-order-report {
+                position: relative;
+                top: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .order-report-container {
+        .order-report-header {
+            display: flex;
+            flex-direction: column;
+
+            .order-report-title {
+                margin-bottom: 10px;
+                font-size: 25px;
+            }
+
+            .filter-order-select {
+                width: 74px;
+            }
+        }
+    }
+}

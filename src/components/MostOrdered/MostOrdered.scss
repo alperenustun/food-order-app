@@ -1,0 +1,191 @@
+@use "../../styles/abstracts/variables" as *;
+
+.order-conf-main {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    height: min-content;
+    padding: 15px;
+    background-color: $dashboard-divs;
+    margin: 110px 0 20px 20px;
+    border-radius: 15px;
+    color: $font-color-white;
+
+    .title-order-conf {
+        display: flex;
+        position: relative;
+        border-bottom: solid 1px $font-color-light;
+        margin-bottom: 15px;
+
+        .part-of-title-conf {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .order-types-period {
+                width: 95px;
+                height: 45px;
+                position: absolute;
+                right: 0;
+                padding: 5px;
+                border-radius: 8px;
+                border: 1px solid $font-color-light;
+                background-color: $dashboard-divs;
+                color: $font-color-white;
+            }
+
+            .header-order-conf {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 39.2px;
+                text-align: left;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+    }
+
+    .order-conf-body {
+        display: flex;
+        height: 100%;
+        gap: 10px;
+
+        .conf-left-order-part {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: min-content;
+
+            .conf-pic-and-name-and-price {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 10px;
+
+                .conf-pic-and-name-and-price-2 {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .conf-name-and-price {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .conf-name-and-price-p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18.2px;
+                        text-align: left;
+                        color: $font-color-white;
+                    }
+
+                    .conf-name-and-price-p-p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18.2px;
+                        text-align: left;
+                        color: $font-color-light
+                    }
+                }
+
+                .food-photos-order-conf {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .discount-subtotal-div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .view-all-orders-btn {
+        width: 100%;
+        height: 48px;
+        padding: 14px;
+        border-radius: 8px;
+        border: 2px solid #EA7C69;
+        background: transparent;
+        color: #EA7C69;
+        cursor: pointer;
+    }
+
+    .view-all-orders-btn:hover {
+        background-color: #37334b;
+    }
+
+    .view-all-orders-btn:active {
+        background-color: #565172;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .order-conf-main {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .order-conf-main {
+        width: 86%;
+
+        .title-order-conf {
+            display: flex;
+            border-bottom: solid 1px #555555;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            justify-content: center;
+            flex-direction: column;
+
+            .part-of-title-conf {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .order-types-period {
+                    position: relative;
+                    width: 81px;
+                    height: 33px;
+                }
+            }
+        }
+
+        .order-conf-body {
+            display: flex;
+            flex-direction: column;
+
+            .conf-right-order-part {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .order-conf-main {
+        .order-conf-body {
+            .conf-left-order-part {
+                .conf-pic-and-name-and-price {
+                    .conf-pic-and-name-and-price-2 {
+                        .food-photos-order-conf {
+                            width: 40px;
+                        }
+
+                        .conf-name-and-price {
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
