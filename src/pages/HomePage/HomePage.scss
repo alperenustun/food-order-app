@@ -3,11 +3,9 @@
 .mainRoot {
   @extend %main-container;
   display: flex;
+  gap: 30px;
 
-
-
-}
-
-.homePagetext {
-  width: 80%;
+  .main-dishes-container {
+    width: 100%;
+  }
 }

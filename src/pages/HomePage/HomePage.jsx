@@ -18,9 +18,10 @@ function HomePage() {
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <h1>Homepage example</h1>
-        <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
-        <DishesMenu filteredDishes={filteredDishes} />
+        <div className="main-dishes-container">
+          <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
+          <DishesMenu filteredDishes={filteredDishes} />
+        </div>
         <div className="paymentConfirmation">
           <PaymentConfirmation />
         </div>
