@@ -2,16 +2,23 @@
 
 .produckts-management {
     background-color: $secondary-bg;
+    border-radius: 8px;
     margin: 10px;
     height: 60%;
 }
 
+.produckts-management-title-section {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    padding: 50px;
+}
+
 .produckts-management-title-box {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    gap: 200px;
-    border: 2px solid red;
-    margin: 50px;
+    gap: 400px;
 }
 
 .produckts-management-title3 {
@@ -19,12 +26,14 @@
     font-size: 20px;
     font-weight: 600;
     width: 250px;
-    border: 2px solid red;
     font-family: $primary-font;
 }
 
 .produckts-management-title-box-btn {
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: $font-color-white;
     font-family: $primary-font;
     font-size: 16px;
@@ -34,4 +43,42 @@
     padding: 14px;
     border: 1px solid $border-color;
     border-radius: 8px;
+}
+
+
+.produckts-management-link-box {
+    display: flex;
+    margin-top: 40px;
+    gap: 40px;
+    font-family: $primary-font;
+    font-weight: 600;
+    margin-bottom: 50px;
+    line-height: 19.6px;
+
+}
+
+.produckts-management-link-box li a:hover {
+    color: $accent-color;
+    border-bottom: 3px solid $accent-color;
+    padding-bottom: 5px;
+}
+
+.produckts-management-button-box {
+    display: flex;
+    gap: 20px;
+}
+
+.produckts-management-button-box-btn {
+    background-color: transparent;
+    font-family: $primary-font;
+    font-weight: 600;
+    padding: 14px 28px 14px 28px;
+    color: $accent-color;
+    border-radius: 8px;
+    border: 1px solid $accent-color;
+}
+
+.produckts-management-button-box-btn:hover {
+    color: white;
+    background-color: $accent-color;
 }
