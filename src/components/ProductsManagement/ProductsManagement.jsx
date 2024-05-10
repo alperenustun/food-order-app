@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
 import "./ProductsManagement.scss";
+
 
 function ProductsManagement() {
     return (

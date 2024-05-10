@@ -6,8 +6,7 @@
     max-width: 800px;
     margin-left: 250px;
     margin-top: 10px;
-    width: 50%;
-    height: 60%;
+    width: 100%;
 }
 
 .produckts-management-title-section {
@@ -22,21 +21,18 @@
     align-items: center;
     justify-content: space-between;
     border: 2px solid red;
-    gap: 400px;
 }
 
 .produckts-management-title3 {
     font-size: 20px;
     font-weight: 600;
     color: $font-color;
-    width: 250px;
     font-family: $primary-font;
 }
 
 .produckts-management-title-box-btn {
     background-color: transparent;
     display: flex;
-    width: 200px;
     align-items: center;
     color: $font-color;
     border: 1px solid $primary-bg;
@@ -98,7 +94,6 @@
 .new-product-box {
     border: 2px dashed $accent-color;
     width: 200px;
-    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;

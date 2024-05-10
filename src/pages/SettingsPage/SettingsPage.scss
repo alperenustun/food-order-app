@@ -1,0 +1,8 @@
+@import "../../styles/abstracts/placeholders";
+
+.settings-page {
+    @extend %main-container;
+    display: flex;
+    gap: 30px;
+
+}

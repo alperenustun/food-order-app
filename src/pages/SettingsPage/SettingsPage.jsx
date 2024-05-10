@@ -5,13 +5,18 @@ import ProductsManagement from "@/components/ProductsManagement/ProductsManageme
 function SettingsPage() {
 
   return (
-    <main className="settings-page">
+    <div>
       <Sidebar />
-      <div className="settings-page-content">
-        <ProductsManagement />
+      <div className="settings-page">
+        <h1>Settings</h1>
+        <div className="settings-page-content">
+          <ProductsManagement />
+        </div>
       </div>
-    </main>
+    </div>
   );
 }
 
+
 export default SettingsPage;
+
