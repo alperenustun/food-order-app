@@ -1,11 +1,11 @@
 import "@/components/SettingsSidebar/SettingsSidebar.scss";
 import { NavLink } from "react-router-dom";
-const homeImg = "/src/assets/home.png";
-const likeImg = "/src/assets/like.png";
-const foImg = "/src/assets/foImg.png";
-const notificationImg = "/src/assets/notification.png";
-const lockImg = "/src/assets/lock.png";
-const settingImg = "/src/assets/setting.png";
+import homeImg from "@/assets/home-logo.png"
+import likeImg from "@/assets/like.png";
+import foImg from "@/assets/info-image.png";
+import notificationImg from "@/assets/notification.png";
+import lockImg from "@/assets/lock.png";
+import settingImg from "@/assets/setting.png";
 
 function SettingsSidebar() {
 
