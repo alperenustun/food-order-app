@@ -1,6 +1,6 @@
 @use "../../styles/abstracts/variables" as *;
 
-.produckts-management {
+.products-management {
     background-color: $secondary-bg;
     border-radius: 8px;
     max-width: 800px;
@@ -9,28 +9,28 @@
     width: 100%;
 }
 
-.produckts-management-title-section {
+.products-management-title-section {
     display: flex;
     flex-direction: column;
     border: 2px solid red;
     padding: 50px;
 }
 
-.produckts-management-title-box {
+.products-management-title-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     border: 2px solid red;
 }
 
-.produckts-management-title3 {
+.products-management-title3 {
     font-size: 20px;
     font-weight: 600;
     color: $font-color;
     font-family: $primary-font;
 }
 
-.produckts-management-title-box-btn {
+.products-management-title-box-btn {
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
 }
 
 
-.produckts-management-link-box {
+.products-management-link-box {
     display: flex;
     margin-top: 40px;
     gap: 40px;
@@ -58,18 +58,18 @@
 
 }
 
-.produckts-management-link-box li a:hover {
+.products-management-link-box li:hover {
     color: $accent-color;
     border-bottom: 3px solid $accent-color;
     padding-bottom: 5px;
 }
 
-.produckts-management-button-box {
+.products-management-button-box {
     display: flex;
     gap: 20px;
 }
 
-.produckts-management-button-box-btn {
+.products-management-button-box-btn {
     background-color: transparent;
     font-family: $primary-font;
     font-weight: 600;
@@ -79,12 +79,12 @@
     border: 1px solid $accent-color;
 }
 
-.produckts-management-button-box-btn:hover {
+.products-management-button-box-btn:hover {
     color: white;
     background-color: $accent-color;
 }
 
-.produckts-food-section {
+.products-food-section {
     border: 2px solid red;
     display: grid;
     padding: 10px;
