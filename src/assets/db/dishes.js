@@ -4,7 +4,7 @@ import beefImage from "@/assets/images/foo.png";
 import healtImage from "@/assets/images/healt.png";
 import instImage from "@/assets/images/instant.png";
 import seeImage from "@/assets/images/seafood.png";
-export let foods = [
+export let dishes = [
     {
         id: 1,
         image: spicyImage,

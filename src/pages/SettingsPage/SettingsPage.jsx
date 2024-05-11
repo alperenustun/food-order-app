@@ -2,6 +2,7 @@ import "../SettingsPage/SettingsPage.scss";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ProductsManagement from "@/components/ProductsManagement/ProductsManagement"
 
+
 function SettingsPage() {
 
   return (
