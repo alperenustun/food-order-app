@@ -105,7 +105,7 @@ function ProductsManagement() {
                 <div className="products-food-section">
                     <div className="new-product-box">
                         <button className="new-product-box-btn">
-                            <img src="Artı.svg" alt="Add new dish" />
+                            <img src="src/assets/SettingsPlus.svg" alt="Add new dish" />
                         </button>
                         <h4>Add new dish</h4>
                     </div>

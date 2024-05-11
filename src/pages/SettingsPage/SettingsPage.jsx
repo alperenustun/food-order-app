@@ -1,6 +1,7 @@
 import "../SettingsPage/SettingsPage.scss";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ProductsManagement from "@/components/ProductsManagement/ProductsManagement"
+import SettingsBar from "@/components/SettingsBar/SettingsBar";
 
 
 function SettingsPage() {
@@ -11,6 +12,7 @@ function SettingsPage() {
       <div className="settings-page">
         <h1>Settings</h1>
         <div className="settings-page-content">
+          <SettingsBar />
           <ProductsManagement />
         </div>
       </div>
