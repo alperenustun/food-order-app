@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./ProductsManagement.scss";
 import { dishes } from '../../assets/db/dishes';
+import EditPanel from './EditPanel/EditPanel';
 
 function ProductsManagement() {
     const categories = [
@@ -12,22 +13,72 @@ function ProductsManagement() {
         "Dessert",
     ];
 
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]); // Varsayılan olarak ilk kategoriyi seç
+    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-    function FoodCard({ food }) {
+    function FoodCard({ food, setDishes }) {
+        const [isEditing, setIsEditing] = useState(false);
+        const [editedDescription, setEditedDescription] = useState(food.description);
+        const [editedPrice, setEditedPrice] = useState(food.price);
+
+        const handleEditClick = () => {
+            setIsEditing(true);
+        };
+
+        const handleCancelEdit = () => {
+            setIsEditing(false);
+            // Düzenlemeyi iptal ederken orijinal değerlere geri dön
+            setEditedDescription(food.description);
+            setEditedPrice(food.price);
+        };
+
+        const handleSaveEdit = () => {
+            // Düzenlenmiş değerleri dishes dizisindeki ilgili nesnenin özelliklerini güncelleyerek kaydet
+            const updatedDishes = dishes.map(dish => {
+                if (dish.id === food.id) {
+                    return { ...dish, description: editedDescription, price: editedPrice };
+                }
+                return dish;
+            });
+
+            // dishes dizisini güncelle
+            setDishes(updatedDishes);
+            setIsEditing(false);
+        };
+
+        const handleDescriptionChange = (e) => {
+            setEditedDescription(e.target.value);
+        };
+
+        const handlePriceChange = (e) => {
+            setEditedPrice(e.target.value);
+        };
+
         return (
             <div className="food-card">
                 <img src={food.image} alt="Food" />
-                <p className='food-card-p'>{food.description}</p>
-                <h4 className='food-card-title'>{food.price}</h4>
-                <div className="food-card-box-btn">
-                    <img></img>
-                    <button className="food-card-btn">Edit dish</button>
-                </div>
-
+                {!isEditing ? (
+                    <>
+                        <p className='food-card-p'>{food.description}</p>
+                        <h4 className='food-card-title'>{food.price}</h4>
+                        <div className="food-card-box-btn">
+                            <button className="food-card-btn" onClick={handleEditClick}>Edit dish</button>
+                        </div>
+                    </>
+                ) : (
+                    <EditPanel
+                        initialDescription={editedDescription}
+                        initialPrice={editedPrice}
+                        onSave={handleSaveEdit}
+                        onCancel={handleCancelEdit}
+                        onDescriptionChange={handleDescriptionChange}
+                        onPriceChange={handlePriceChange}
+                    />
+                )}
             </div>
-        )
+        );
     }
+
+
 
     return (
         <div className="products-management">
