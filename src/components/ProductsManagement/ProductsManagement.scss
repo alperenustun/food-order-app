@@ -91,7 +91,7 @@
 .new-product-box {
     border: 2px dashed $accent-color;
     border-radius: 8px;
-    width: 200px;
+    max-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,4 +112,41 @@
     font-weight: 600;
     line-height: 22.4px;
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .products-food-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .products-management-link-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .products-management-title-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+    }
+
+    .products-management-button-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .products-management-link-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
 }
