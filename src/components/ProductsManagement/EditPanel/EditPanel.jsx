@@ -1,49 +1,34 @@
-import React, { useState } from 'react';
+import React from "react";
 import "./EditPanel.scss";
 
-function EditPanel({ initialDescription, initialPrice, onSave, onCancel }) {
-    const [description, setDescription] = useState(initialDescription);
-    const [price, setPrice] = useState(initialPrice);
+function EditPanel({ editedDescription, setEditedDescription, editedPrice, setEditedPrice, onCancelEdit, onSaveEdit }) {
 
-    const handleSave = () => {
-        onSave(description, price);
-        onCancel();
+    const handleSaveEdit = () => {
+        onSaveEdit(); // onSaveEdit fonksiyonunu çağır
     };
 
-    const handleCancel = () => {
-        onCancel();
-    };
-
-    const handleDescriptionChange = (e) => {
-        setDescription(e.target.value);
-    };
-
-    const handlePriceChange = (e) => {
-        setPrice(e.target.value);
+    const handleCancelEdit = () => {
+        onCancelEdit(); // onCancelEdit fonksiyonunu çağır
     };
 
     return (
-        <div className="edit-panel-section">
-            <div className="edit-panel-section-box-input">
-                <input className="edit-panel-section-input"
-                    type="text"
-                    value={description}
-                    onChange={handleDescriptionChange}
-                />
-                <input className="edit-panel-section-input"
-                    type="number"
-                    value={price}
-                    onChange={handlePriceChange}
-                />
-            </div>
-            <div className="edit-panel-section-box-btn">
-                <button className="edit-panel-section-btn" onClick={handleSave}>Save</button>
-                <button className="edit-panel-section-btn" onClick={handleCancel}>Cancel</button>
-            </div>
+        <div className="bu edit panel olacak">
+            <input
+                type="text"
+                name="description"
+                value={editedDescription}
+                onChange={(e) => setEditedDescription(e.target.value)}
+            />
+            <input
+                type="text"
+                name="price"
+                value={editedPrice}
+                onChange={(e) => setEditedPrice(e.target.value)}
+            />
+            <button onClick={handleSaveEdit}>Save</button>
+            <button onClick={handleCancelEdit}>Cancel</button>
         </div>
     );
-}
-
-
+};
 
 export default EditPanel;
