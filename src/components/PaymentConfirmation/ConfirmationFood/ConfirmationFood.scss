@@ -1,30 +1,30 @@
 @import "@/styles/abstracts/variables.scss";
 
-.food-card-box-name {
+.menu-card-box-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.food-card-name {
+.menu-card-name {
     display: flex;
     flex-direction: column;
     padding: 14px 14px 14px 14px;
     gap: 5px;
 }
 
-.food-card-name-title3 {
+.menu-card-name-title3 {
     font-size: 14px;
 }
 
-.food-card-name-price {
+.menu-card-name-price {
     font-size: 12px;
     color: $primary-bg;
     gap: 5px;
 }
 
-.food-card-name-quantity {
+.menu-card-name-quantity {
     border-radius: 8px;
     border: 1px solid $primary-bg;
     background: $primary-bg;
@@ -32,7 +32,7 @@
 
 }
 
-.food-card-total-price {
+.menu-card-total-price {
     width: 90px;
     display: flex;
     justify-content: space-between;
@@ -41,11 +41,11 @@
 
 }
 
-.food-car-total-price-p {
+.menu-car-total-price-p {
     display: flex;
 }
 
-.food-card-ınput {
+.menu-card-ınput {
     background: $primary-bg;
     color: $primary-bg;
     margin-top: 10px;
@@ -57,14 +57,14 @@
 
 }
 
-.food-card-ınputbuttoncontainer {
+.menu-card-ınputbuttoncontainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.food-card-button {
+.menu-card-button {
     border-radius: 8px;
     border: 1px solid $accent-color;
     background-color: transparent;

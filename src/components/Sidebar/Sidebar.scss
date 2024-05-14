@@ -18,6 +18,7 @@
 
   .left-arrow {
     text-align: center;
+
     img {
       width: 30px;
     }
@@ -27,6 +28,22 @@
 .sidebar-collapsed {
   width: 100px;
 }
+
+.sidebar-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.sidebar-navbar li img {
+  width: 24px;
+  height: 100hv;
+
+}
+
 
 @media (max-width: 768px) {
   .sidebar-collapsed {

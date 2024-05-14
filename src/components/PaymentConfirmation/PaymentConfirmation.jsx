@@ -1,5 +1,5 @@
-import "./PaymentConfirmation.scss";
 import React, { useState } from "react";
+import "./PaymentConfirmation.scss";
 import ConfirmationFood from "./ConfirmationFood/ConfirmationFood.jsx";
 
 const mockFoodData = [
@@ -64,7 +64,6 @@ function PaymentConfirmation() {
             <h3 className="payment-confirmationtitle-title3">Item</h3>
           </div>
         </div>
-
         <div className="food-container">
           {foods.map((food) => (
             <ConfirmationFood

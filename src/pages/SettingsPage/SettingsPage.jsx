@@ -1,11 +1,23 @@
-import "./SettingsPage.scss";
+import "../SettingsPage/SettingsPage.scss";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import ProductsManagement from "@/components/ProductsManagement/ProductsManagement"
+
 
 function SettingsPage() {
+
   return (
-    <main className="settings-page">
-      <h1>Settings Page</h1>
-    </main>
+    <div>
+      <Sidebar />
+      <div className="settings-page">
+        <h1>Settings</h1>
+        <div className="settings-page-content">
+          <ProductsManagement />
+        </div>
+      </div>
+    </div>
   );
 }
 
+
 export default SettingsPage;
+
