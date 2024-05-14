@@ -3,8 +3,6 @@
 .products-management {
     background-color: $secondary-bg;
     border-radius: 8px;
-    max-width: 800px;
-    width: 100%;
 }
 
 .products-management-title-section {
@@ -84,14 +82,13 @@
 .products-food-section {
     display: grid;
     margin-bottom: 20px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
 .new-product-box {
     border: 2px dashed $accent-color;
     border-radius: 8px;
-    max-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,11 +112,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-
-    .products-food-section {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 
     .products-management-link-box {
         display: grid;
