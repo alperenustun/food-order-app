@@ -1,7 +1,10 @@
+
 import "../SettingsPage/SettingsPage.scss";
 import SettingsSidebar from "@/components/SettingsSidebar/SettingsSidebar";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import ProductsManagement from "@/components/ProductsManagement/ProductsManagement"
+import AddDishModal from "../../components/Modal/AddDishModal";
+
 
 function SettingsPage() {
 
@@ -12,6 +15,7 @@ function SettingsPage() {
       <div className="settings-page">
          <SettingsSidebar />
         <h1>Settings</h1>
+        <AddDishModal />
         <div className="settings-page-content">
           <ProductsManagement />
         </div>
