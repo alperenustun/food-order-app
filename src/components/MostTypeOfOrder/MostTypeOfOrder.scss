@@ -1,0 +1,35 @@
+.Most-type-of-order {
+  background-color: #1f1d2b;
+  width: 372px;
+  height: 333px;
+  border-radius: 8px;
+  padding: 24px 0 40px 0;
+  gap: 32px;
+  .Most-type-of-order-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    .Most-type-of-order-heading-title {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+    .Most-type-of-order-select {
+      border-radius: 8px;
+      border: 1px solid #1f1d2b;
+      padding: 14px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+  }
+  .Most-type-of-order-line {
+    width: 100%;
+    border: 1px solid #393c49;
+  }
+  .Most-type-of-order-chart {
+    width: 308px;
+    height: 176px;
+  }
+}
