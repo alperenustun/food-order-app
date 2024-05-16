@@ -1,0 +1,83 @@
+@import "../../styles/abstracts/variables";
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $primary-bg;
+}
+
+
+.login-page-section {
+    background-color: $secondary-bg;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: $button-shadow;
+    width: 400px;
+}
+
+.login-page-section h1 {
+    color: $primary-font-color;
+    font-family: $primary-font;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-page-section-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.login-page-section-form h4 {
+    color: $font-color-light;
+    font-family: $primary-font;
+    font-size: 1rem;
+}
+
+.login-page-section-form-input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid $font-color-light;
+    background-color: $secondary-bg;
+    color: $primary-font-color;
+    font-family: $primary-font;
+}
+
+.login-page-section-form-input-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: $accent-color;
+    font-size: 1rem;
+    color: $primary-font-color;
+    font-family: $primary-font;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-page-section button {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    background-color: $accent-color;
+    font-size: 1rem;
+    color: $primary-font-color;
+    font-family: $primary-font;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-page-section button:hover {
+    background-color: $primary-bg;
+    color: $accent-color;
+}
+
+.login-page-section-form-input-btn:hover {
+    background-color: $primary-bg;
+    color: $accent-color;
+}
