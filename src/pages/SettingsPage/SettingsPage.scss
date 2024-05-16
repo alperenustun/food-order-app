@@ -1,8 +1,8 @@
+@use "../../styles/abstracts/variables" as *;
 @import "../../styles/abstracts/placeholders";
 
 .settings-page {
     @extend %main-container;
     display: flex;
     flex-direction: column;
-
 }
