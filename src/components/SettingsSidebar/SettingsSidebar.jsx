@@ -5,14 +5,14 @@ import likeImg from "@/assets/like.png";
 import foImg from "@/assets/info-image.png";
 import notificationImg from "@/assets/notification.png";
 import lockImg from "@/assets/lock.png";
-import settingImg from "@/assets/setting.png";
+import settingImg from "@/assets/Setting.png";
 
 function SettingsSidebar() {
 
     return (
         <div className="settings-sidebar-main">
 
-            <NavLink to="/settings/appearance" id="appearance-nav-id" className={(object) => {
+            <NavLink to="/settings/appearance" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="appearance-sidebar-id" >
@@ -21,7 +21,7 @@ function SettingsSidebar() {
                 </button>
             </NavLink>
 
-            <NavLink to="/settings/restaurant" id="restaurant-nav-id" className={(object) => {
+            <NavLink to="/settings/restaurant" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="restaurant-sidebar-id" >
@@ -30,7 +30,7 @@ function SettingsSidebar() {
                 </button>
             </NavLink>
 
-            <NavLink to="/settings/products" id="products-nav-id" className={(object) => {
+            <NavLink to="/settings/products" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="products-sidebar-id">
@@ -39,7 +39,7 @@ function SettingsSidebar() {
                 </button>
             </NavLink>
 
-            <NavLink to="/settings/notifications" id="notifications-nav-id" className={(object) => {
+            <NavLink to="/settings/notifications" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="notifications-sidebar-id">
@@ -47,7 +47,7 @@ function SettingsSidebar() {
                     <p className="settings-sidebar-title">Customize your notifications</p>
                 </button>
             </NavLink>
-            <NavLink to="/settings/security" id="security-nav-id" className={(object) => {
+            <NavLink to="/settings/security" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="security-sidebar-id">
@@ -55,7 +55,7 @@ function SettingsSidebar() {
                     <p className="settings-sidebar-title">Configure Password, PIN, etc</p>
                 </button>
             </NavLink>
-            <NavLink to="/settings/configure" id="configure-nav-id" className={(object) => {
+            <NavLink to="/settings/configure" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="configure-sidebar-id">
@@ -63,7 +63,7 @@ function SettingsSidebar() {
                     <p className="settings-sidebar-title">Display new features</p>
                 </button>
             </NavLink>
-            <NavLink to="/settings/about-us" id="about-nav-id" className={(object) => {
+            <NavLink to="/settings/about-us" className={(object) => {
                 return object.isActive ? "sidebar-div-active" : "sidebar-div";
             }} >
                 <button className="sidebar-btn-class" id="about-us-sidebar-id">

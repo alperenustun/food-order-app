@@ -5,23 +5,12 @@
     flex-direction: column;
     color: $primary-font-color;
     width: 20%;
-    background-color: $dashboard-divs;
+    background-color: $secondary-bg;
     padding-bottom: 100px;
-    border-radius: 20px;
-
-    #appearance-nav-id {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-
-    #about-nav-id {
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
 
     .sidebar-div {
         display: flex;
-        background-color: $dashboard-divs;
+        background-color: $secondary-bg;
         flex-direction: column;
         justify-content: center;
         padding: 30px 10px 30px 20px;
