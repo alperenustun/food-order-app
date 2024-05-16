@@ -1,0 +1,47 @@
+@use "@/styles/abstracts/variables.scss" as *;
+
+.edit-panel-section {
+    margin-top: 50px;
+}
+
+.edit-panel-section-ınput-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.edit-panel-section-ınput-box input {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    border: 2px solid $accent-color;
+    border-radius: 8px;
+    padding: 5px 2px;
+    background-color: transparent;
+    color: $accent-color;
+    font-family: $primary-font;
+}
+
+.edit-panel-section button {
+    background-color: $accent-color;
+    color: $secondary-bg;
+    border: none;
+    border-radius: 8px;
+    font-family: $primary-font;
+    font-weight: 600;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+
+.edit-panel-section button:hover {
+    background-color: $secondary-bg;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+}
+
+.edit-panel-section-btn-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

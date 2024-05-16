@@ -1,0 +1,73 @@
+@import "@/styles/abstracts/variables.scss";
+
+.menu-card-box-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu-card-name {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 14px 14px 14px;
+    gap: 5px;
+}
+
+.menu-card-name-title3 {
+    font-size: 14px;
+}
+
+.menu-card-name-price {
+    font-size: 12px;
+    color: $primary-bg;
+    gap: 5px;
+}
+
+.menu-card-name-quantity {
+    border-radius: 8px;
+    border: 1px solid $primary-bg;
+    background: $primary-bg;
+    padding: 14px 14px 14px 14px;
+
+}
+
+.menu-card-total-price {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.menu-car-total-price-p {
+    display: flex;
+}
+
+.menu-card-ınput {
+    background: $primary-bg;
+    color: $primary-bg;
+    margin-top: 10px;
+    width: 250px;
+    padding: 15px 14px 15px 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+}
+
+.menu-card-ınputbuttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-card-button {
+    border-radius: 8px;
+    border: 1px solid $accent-color;
+    background-color: transparent;
+    padding: 10px;
+
+}

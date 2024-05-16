@@ -13,7 +13,7 @@ function Sidebar() {
     <aside className={`sidebar ${!isSidebarToggled && "sidebar-collapsed"}`}>
       {/* these examples should be deleted */}
       <nav>
-        <ul>
+        <ul className="sidebar-navbar">
           <li className="left-arrow" onClick={toggleSidebar}>
             <img
               src={leftArrow}
@@ -24,10 +24,12 @@ function Sidebar() {
               }}
             />
           </li>
-          <li>Link 1</li>
-          <li>Link 2</li>
-          <li>Link 3</li>
-          <li>Link 4</li>
+          <li><img src="src/assets/Homepage-icon.svg" alt="icon" /></li>
+          <li><img src="src/assets/Discount-icon.svg" alt="icon" /></li>
+          <li><img src="src/assets/Notification-icon.svg" alt="icon" /></li>
+          <li><img src="src/assets/Message-icon.svg" alt="icon" /></li>
+          <li><img src="src/assets/Setting-icon.svg" alt="icon" /></li>
+          <li><img src="src/assets/Log-Out-icon.svg" alt="icon" /></li>
         </ul>
       </nav>
       {/* these examples should be deleted */}
