@@ -12,6 +12,7 @@ function MostTypeOfOrder() {
         </select>
       </div>
       <span className="Most-type-of-order-line"></span>
+      {/* <hr /> */}
       <div className="Most-type-of-order-chart">
         <ApexChart />
       </div>
