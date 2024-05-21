@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Sidebar.scss";
-import leftArrow from "/left-arrow.svg";
+import homepagehome from "../../assets/homepagehome.svg";
 
 function Sidebar() {
   const [isSidebarToggled, setIsSidebarToggled] = useState(false);
@@ -16,12 +16,7 @@ function Sidebar() {
         <ul className="sidebar-navbar">
           <li className="left-arrow" onClick={toggleSidebar}>
             <img
-              src={leftArrow}
-              style={{
-                transform: !isSidebarToggled
-                  ? "rotateY(180deg)"
-                  : "rotateY(0deg)",
-              }}
+              src={homepagehome}
             />
           </li>
           <li><img src="src/assets/Homepage-icon.svg" alt="icon" /></li>
