@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import "./HomePage.scss";
 import { foods } from "@/assets/db/foods";
@@ -6,14 +5,16 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import { useAuth } from "@/components/AuthProvider";
 import DishesMenu from "@/components/DishesMenu/DishesMenu";
 import CategoryTabs from "@/components/CategoryTabs/CategoryTabs";
-import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation"
+import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation";
 import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
 
 function HomePage() {
-  const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
+  const { fireStoreUser } = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
 
   const [dishes, setDishes] = useState(foods);
   const [filteredDishes, setFilteredDishes] = useState(foods);
+
+  if (!fireStoreUser) return <div>Loading...</div>;
 
   return (
     <div>
@@ -29,7 +30,6 @@ function HomePage() {
         </div>
       </div>
     </div>
-
   );
 }
 
