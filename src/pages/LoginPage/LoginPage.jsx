@@ -7,10 +7,12 @@ import {
   signOut,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/components/AuthProvider";
 
 function LoginPage() {
-
   const navigate = useNavigate();
+
+  const { fireStoreUser } = useAuth();
 
   onAuthStateChanged(auth, (currentUser) => {
     // setUser(currentUser);
@@ -41,38 +43,45 @@ function LoginPage() {
     }
   }
 
+  const renderForm = (
+    <form
+      className="login-page-section-form"
+      onSubmit={(e) => handleUserLogin(e)}
+    >
+      <h4>User name</h4>
+      <input
+        className="login-page-section-form-input"
+        onKeyUp={(e) => handleChange(e)}
+        name="email"
+        type="email"
+      />
+      <h4>Password</h4>
+      <input
+        className="login-page-section-form-input"
+        onKeyUp={(e) => handleChange(e)}
+        name="password"
+        type="password"
+      />
+      <input
+        className="login-page-section-form-input-btn"
+        type="submit"
+        value="Login"
+      />
+    </form>
+  );
+
   return (
     <div className="login-page">
       <div className="login-page-section">
         <h1>Login</h1>
-        <form
-          className="login-page-section-form"
-          onSubmit={(e) => handleUserLogin(e)}
-        >
-          <h4>User name</h4>
-          <input
-            className="login-page-section-form-input"
-            onKeyUp={(e) => handleChange(e)}
-            name="email"
-            type="email"
-          />
-          <h4>Password</h4>
-          <input
-            className="login-page-section-form-input"
-            onKeyUp={(e) => handleChange(e)}
-            name="password"
-            type="password"
-          />
-          <input
-            className="login-page-section-form-input-btn"
-            type="submit"
-            value="Login"
-          />
-        </form>
+        {fireStoreUser ? (
+          <h2 style={{ color: "#fff" }}>Welcome {fireStoreUser.displayName}</h2>
+        ) : (
+          renderForm
+        )}
         <button
           onClick={() => {
             signOut(auth);
-            console.log("clicked");
           }}
         >
           Logout
