@@ -20,7 +20,7 @@ function HomePage() {
       <Sidebar />
       <div className="mainRoot">
         <div className="main-dishes-container">
-          <HomepageHeader />
+          <HomepageHeader userName={fireStoreUser.displayName} />
           <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
           <DishesMenu filteredDishes={filteredDishes} />
         </div>
@@ -29,6 +29,7 @@ function HomePage() {
         </div>
       </div>
     </div>
+
   );
 }
 
