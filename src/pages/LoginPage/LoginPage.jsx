@@ -75,7 +75,7 @@ function LoginPage() {
       <div className="login-page-section">
         <h1>Login</h1>
         {fireStoreUser ? (
-          <h2 style={{ color: "#fff" }}>Welcome {fireStoreUser.displayName}</h2>
+          <h2 className="login-page-section-tittle2">Welcome {fireStoreUser.displayName}</h2>
         ) : (
           renderForm
         )}
