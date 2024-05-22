@@ -17,7 +17,7 @@ function HomePage() {
   return (
     <div>
       <Sidebar />
-      <div className="mainRoot">
+      <div className="mainRoot"> 
         <div className="main-dishes-container">
           <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
           <DishesMenu filteredDishes={filteredDishes} />
