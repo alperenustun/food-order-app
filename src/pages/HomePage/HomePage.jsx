@@ -6,7 +6,8 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import { useAuth } from "@/components/AuthProvider";
 import DishesMenu from "@/components/DishesMenu/DishesMenu";
 import CategoryTabs from "@/components/CategoryTabs/CategoryTabs";
-import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation"
+import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation";
+import AddDishModal from "../../components/Modal/AddDishModal";
 
 function HomePage() {
   const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
@@ -17,7 +18,7 @@ function HomePage() {
   return (
     <div>
       <Sidebar />
-      <div className="mainRoot">
+      <div className="mainRoot"> 
         <div className="main-dishes-container">
           <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
           <DishesMenu filteredDishes={filteredDishes} />
