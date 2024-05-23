@@ -25,7 +25,6 @@ function HomePage() {
         </div>
         <div className="paymentConfirmation">
           <PaymentConfirmation />
-          <AddDishModal />
         </div>
       </div>
     </div>

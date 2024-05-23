@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./AddDishModal.scss";
 
-function AddDishModal() {
+function AddDishModal({ isModalOpen, setIsModalOpen }) {
   const [formData, setFormData] = useState({
     name: "",
     price: 0,
@@ -10,11 +10,8 @@ function AddDishModal() {
     image: "",
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
-
   function handleFormInput(e) {
-    const value =
-      e.target.type === "number" ? parseFloat(e.target.value) : e.target.value;
+    const value = e.target.type === "number" ? parseFloat(e.target.value) : e.target.value;
     setFormData({
       ...formData,
       [e.target.name]: value,
@@ -23,7 +20,6 @@ function AddDishModal() {
 
   function handleAddDish() {
     console.log(formData);
-
     setFormData({
       name: "",
       price: 0,
