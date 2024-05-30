@@ -39,9 +39,15 @@
 }
 
 .sidebar-navbar li img {
-  width: 24px;
-  height: 100hv;
+  width: 30px;
+  height: 10vh;
+}
 
+.sidebar-navbar li:hover {
+  background-color: $primary-bg;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
