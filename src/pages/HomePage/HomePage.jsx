@@ -7,6 +7,7 @@ import DishesMenu from "@/components/DishesMenu/DishesMenu";
 import CategoryTabs from "@/components/CategoryTabs/CategoryTabs";
 import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation";
 import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
+import AddDishModal from "../../components/Modal/AddDishModal";
 
 function HomePage() {
   const { fireStoreUser } = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
