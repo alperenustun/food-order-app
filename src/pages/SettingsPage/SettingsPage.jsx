@@ -10,9 +10,9 @@ function SettingsPage() {
     <main className="mainRoot">
       <Sidebar />
       <div className="settings-page">
-         <SettingsSidebar />
         <h1>Settings</h1>
         <div className="settings-page-content">
+          <SettingsSidebar />
           <ProductsManagement />
         </div>
       </div>
