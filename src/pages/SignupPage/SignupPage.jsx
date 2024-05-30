@@ -59,40 +59,42 @@ function SignupPage() {
 
   return (
     <main className="signup-page">
-      <h1>Signup Page</h1>
-      <form onSubmit={(e) => signupUser(e)}>
-        <input
-          type="text"
-          placeholder="Full Name"
-          name="fullName"
-          onKeyUp={handleChange}
-        />
-        <input
-          type="tel"
-          placeholder="Phone number"
-          name="phoneNumber"
-          onKeyUp={handleChange}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          onKeyUp={handleChange}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          onKeyUp={handleChange}
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          name="confirmPassword"
-          onKeyUp={handleChange}
-        />
-        <input type="submit" value="Signup" />
-      </form>
+      <div className="signup-page-section">
+        <h1>Signup Page</h1>
+        <form className="signup-page-section-form" onSubmit={(e) => signupUser(e)}>
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="fullName"
+            onKeyUp={handleChange}
+          />
+          <input
+            type="tel"
+            placeholder="Phone number"
+            name="phoneNumber"
+            onKeyUp={handleChange}
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            onKeyUp={handleChange}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            onKeyUp={handleChange}
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            name="confirmPassword"
+            onKeyUp={handleChange}
+          />
+          <input className="signup-page-section-form-btn" type="submit" value="Signup" />
+        </form>
+      </div>
     </main>
   );
 }
