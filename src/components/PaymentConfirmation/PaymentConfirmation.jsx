@@ -35,15 +35,15 @@ const mockFoodData = [
   },
 ];
 
-function PaymentConfirmation() {
+function PaymentConfirmation({dishInfo}) {
   const [foods, setFoods] = useState(mockFoodData);
 
   const handleDeleteFood = (foodId) => {
-    const updatedFoods = foods.filter((food) => food.id !== foodId);
+    const updatedFoods = dishInfo.filter((food) => food.id !== foodId);
     setFoods(updatedFoods);
   };
 
-  const totalPrice = mockFoodData.reduce(
+  const totalPrice = dishInfo.reduce(
     (acc, food) => acc + food.price * food.quantity,
     0
   );
@@ -65,7 +65,7 @@ function PaymentConfirmation() {
           </div>
         </div>
         <div className="food-container">
-          {foods.map((food) => (
+          {dishInfo.map((food) => (
             <ConfirmationFood
               key={food.id}
               food={food}

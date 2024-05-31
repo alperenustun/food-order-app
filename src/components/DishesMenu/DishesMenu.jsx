@@ -1,6 +1,8 @@
 import "./DishesMenu.scss";
+import { useState } from "react";
 
-function DishesMenu({ filteredDishes }) {
+
+function DishesMenu({ filteredDishes,setDishInfo }) {
   return (
     <div>
       <div className="dishes-container">
@@ -13,7 +15,7 @@ function DishesMenu({ filteredDishes }) {
       </div>
       <ul className="dishes-boxes">
         {filteredDishes.map((tab) => (
-          <li key={tab.id} className="dishes-box">
+          <li onClick={() => setDishInfo((oldTab) => [...oldTab, tab])} key={tab.id} className="dishes-box">
             <div className="dishes-box-content">
               <img src={tab.image} className="dishes-box-image" />
               <div className="dishes-description">{tab.description}</div>

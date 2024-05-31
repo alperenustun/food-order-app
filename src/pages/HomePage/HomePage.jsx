@@ -14,7 +14,8 @@ function HomePage() {
 
   const [dishes, setDishes] = useState(foods);
   const [filteredDishes, setFilteredDishes] = useState(foods);
-
+  const [dishInfo, setDishInfo] = useState([])
+  console.log(dishInfo);
   if (!fireStoreUser) return <div>Loading...</div>;
 
   return (
@@ -24,10 +25,10 @@ function HomePage() {
         <div className="main-dishes-container">
           <HomepageHeader userName={fireStoreUser.displayName} />
           <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
-          <DishesMenu filteredDishes={filteredDishes} />
+          <DishesMenu filteredDishes={filteredDishes} setDishInfo={setDishInfo} />
         </div>
         <div className="paymentConfirmation">
-          <PaymentConfirmation />
+          <PaymentConfirmation dishInfo={dishInfo} />
         </div>
       </div>
     </div>
