@@ -1,0 +1,21 @@
+.dashboard-page{
+    background-color: #2e303e;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    .dasboard-page-order{
+        width: 646px;
+        height: 777px;
+        border: 1px solid red;
+    }
+    .dasboard-page-most-order{
+        width: 375px;
+        height: 777px;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
