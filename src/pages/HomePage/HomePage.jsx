@@ -1,17 +1,36 @@
-import Sidebar from "@/components/Sidebar/Sidebar";
+import { useState } from "react";
 import "./HomePage.scss";
-import { useAuth } from "../../components/AuthProvider";
-
+import { foods } from "@/assets/db/foods";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import { useAuth } from "@/components/AuthProvider";
+import DishesMenu from "@/components/DishesMenu/DishesMenu";
+import CategoryTabs from "@/components/CategoryTabs/CategoryTabs";
+import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation";
+import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
+import AddDishModal from "../../components/Modal/AddDishModal";
 
 function HomePage() {
-  const auth = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
+  const { fireStoreUser } = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
+
+  const [dishes, setDishes] = useState(foods);
+  const [filteredDishes, setFilteredDishes] = useState(foods);
+  const [dishInfo, setDishInfo] = useState([])
+  console.log(dishInfo);
+  if (!fireStoreUser) return <div>Loading...</div>;
+
   return (
     <div>
       <Sidebar />
       <div className="mainRoot">
-        <h1>Homepage example merhaba</h1>
+        <div className="main-dishes-container">
+          <HomepageHeader userName={fireStoreUser.displayName} />
+          <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
+          <DishesMenu filteredDishes={filteredDishes} setDishInfo={setDishInfo} />
+        </div>
+        <div className="paymentConfirmation">
+          <PaymentConfirmation dishInfo={dishInfo} />
+        </div>
       </div>
-     
     </div>
   );
 }

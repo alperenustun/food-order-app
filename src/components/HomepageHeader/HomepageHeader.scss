@@ -1,0 +1,56 @@
+@use "../../styles/abstracts/variables" as *;
+
+.homepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homepage-header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: $primary-font;
+    font-weight: 600;
+}
+
+.homepage-header-date {
+    color: $font-color-light;
+    font-size: 1.2rem;
+}
+
+.homepage-header-box-search {
+    display: flex;
+    align-items: center;
+    background-color: $secondary-bg;
+    gap: 10px;
+    border: 1px solid $primary-font-color;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+.homepage-header-button {
+    background-color: transparent;
+    border: none;
+}
+
+.homepage-header-button-img {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+
+.homepage-header-search {
+    background-color: transparent;
+    border: none;
+    color: $font-color;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.homepage-header-search:focus {
+    outline: none;
+}

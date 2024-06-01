@@ -1,0 +1,55 @@
+@use "../../../styles/abstracts/variables" as *;
+
+.mainContainer-of-most-order-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innerCont-of-most-order-modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $font-color-white;
+        border-radius: 20px;
+        color: $secondary-bg;
+        padding: 20px;
+        align-items: center;
+
+        .most-order-modal-header {
+            color: $black-color;
+        }
+
+        .food-title-most-ordered-modal {
+            font-size: 15px;
+            font-weight: 500;
+            color: $black-color;
+            line-height: 25px;
+        }
+
+        .most-ordered-modal-btn {
+            background-color: $secondary-bg;
+            border: none;
+            color: $font-color-white;
+            cursor: pointer;
+            margin-top: 15px;
+            height: 40px;
+            width: 100px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .mainContainer-of-most-order-modal {
+        .innerCont-of-most-order-modal {
+            padding: 10px;
+        }
+    }
+}

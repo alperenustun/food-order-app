@@ -1,0 +1,15 @@
+@use "../../styles/abstracts/variables" as *;
+@import "../../styles/abstracts/placeholders";
+
+.settings-page {
+    @extend %main-container;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-page-content {
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+
+}
