@@ -10,7 +10,6 @@ function HomePage() {
       <Sidebar />
       <div className="mainRoot">
         <h1>Homepage example</h1>
-        <DashboardAnalyticsHeader />
       </div>
     </div>
   );
