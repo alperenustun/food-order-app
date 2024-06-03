@@ -2,5 +2,10 @@
 
 .mainRoot {
   @extend %main-container;
-  position: relative;
+  display: flex;
+  gap: 30px;
+
+  .main-dishes-container {
+    width: 100%;
+  }
 }

@@ -1,0 +1,144 @@
+@use "../../styles/abstracts/variables" as *;
+
+.products-management {
+    background-color: $secondary-bg;
+    border-radius: 8px;
+}
+
+.products-management-title-section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 50px;
+}
+
+.products-management-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-management-title3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $font-color;
+    font-family: $primary-font;
+}
+
+.products-management-title-box-btn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: $font-color;
+    border: 1px solid $primary-bg;
+    gap: 10px;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+
+.products-management-link-box {
+    display: flex;
+    margin-top: 40px;
+    gap: 40px;
+    font-family: $primary-font;
+    font-weight: 600;
+    margin-bottom: 50px;
+    line-height: 19.6px;
+    color: $font-color;
+
+}
+
+.products-management-link-box li:hover {
+    color: $accent-color;
+    border-bottom: 3px solid $accent-color;
+    padding-bottom: 5px;
+}
+
+.products-management-button-box {
+    display: flex;
+    gap: 20px;
+}
+
+.products-management-button-box-btn {
+    background-color: transparent;
+    font-family: $primary-font;
+    font-weight: 600;
+    padding: 14px 28px 14px 28px;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 8px;
+}
+
+.products-management-button-box-btn:hover {
+    color: $primary-font-color;
+    background-color: $accent-color;
+}
+
+.products-food-section {
+    display: grid;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.new-product-box {
+    border: 2px dashed $accent-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.new-product-box-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.new-product-box h4 {
+    font-family: $primary-font;
+    color: $accent-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.4px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .products-management-link-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .products-management-title-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+    }
+
+    .products-management-button-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .products-management-link-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
