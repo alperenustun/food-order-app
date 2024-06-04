@@ -8,13 +8,15 @@ import CategoryTabs from "@/components/CategoryTabs/CategoryTabs";
 import PaymentConfirmation from "@/components/PaymentConfirmation/PaymentConfirmation";
 import HomepageHeader from "@/components/HomepageHeader/HomepageHeader";
 import AddDishModal from "../../components/Modal/AddDishModal";
+import DashboardAnalyticsHeader from "@/components/DashboardAnalyticsHeader/DashboardAnalyticsHeader";
 
 function HomePage() {
   const { fireStoreUser } = useAuth(); // auth'u const {fireStoreUser} = useAuth() şeklinde alırsanız user bilgilerine ulaşabilirsiniz
 
   const [dishes, setDishes] = useState(foods);
   const [filteredDishes, setFilteredDishes] = useState(foods);
-
+  const [dishInfo, setDishInfo] = useState([])
+  console.log(dishInfo);
   if (!fireStoreUser) return <div>Loading...</div>;
 
   return (
@@ -24,10 +26,10 @@ function HomePage() {
         <div className="main-dishes-container">
           <HomepageHeader userName={fireStoreUser.displayName} />
           <CategoryTabs setFilteredDishes={setFilteredDishes} dishes={dishes} />
-          <DishesMenu filteredDishes={filteredDishes} />
+          <DishesMenu filteredDishes={filteredDishes} setDishInfo={setDishInfo} />
         </div>
         <div className="paymentConfirmation">
-          <PaymentConfirmation />
+          <PaymentConfirmation dishInfo={dishInfo} />
         </div>
       </div>
     </div>

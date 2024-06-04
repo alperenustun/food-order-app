@@ -1,3 +1,4 @@
+import { foods } from "../../../assets/db/foods";
 import "./ConfirmationFood.scss";
 
 function calculateTotalPrice(food) {
@@ -13,7 +14,8 @@ function ConfirmationFood({ food }) {
     <div className="menu-card">
       <div className="menu-card-box-name">
         <div className="menu-card-name">
-          <h3 className="menu-card-name-title3">{food.name}</h3>
+          <img className="food-image" src={food.image} alt="" />
+          <h3 className="menu-card-name-title3">{food.description}</h3>
           <p className="menu-card-name-price">$ {food.price}</p>
         </div>
         <div className="menu-card-total-price">
