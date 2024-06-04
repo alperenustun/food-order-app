@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./ProductsManagement.scss";
 import { dishes as dbDishes } from "../../assets/db/dishes";
 import FoodCard from "./FoodCard/FoodCard";
+import Filter from "@/assets/Filter.svg";
+import plus24 from "@/assets/plus24.svg";
 
 
 function ProductsManagement() {
@@ -23,7 +25,7 @@ function ProductsManagement() {
                 <div className="products-management-title-box">
                     <h1 className="products-management-title">Products Management</h1>
                     <button className="products-management-title-box-btn">
-                        <img src="Option.png" alt="Manage Categories" /> Manage Categories
+                        <img src={Filter} alt="Manage Categories" /> Manage Categories
                     </button>
                 </div>
                 <div>
@@ -43,7 +45,7 @@ function ProductsManagement() {
                 <div className="products-food-section">
                     <div className="new-product-box">
                         <button className="new-product-box-btn">
-                            <img src="src/assets/SettingsPlus.svg" alt="Add new dish" />
+                            <img src={plus24} alt="Add new dish" />
                         </button>
                         <h4>Add new dish</h4>
                     </div>
