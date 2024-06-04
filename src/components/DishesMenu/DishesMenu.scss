@@ -1,51 +1,53 @@
 @import "../../styles/abstracts/variables";
 
-.dishes-boxes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 50px;
+.dishes-container {
+  border: 1px solid green;
+  .dishes-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
 
-  .dishes-box {
-    background-color: $secondary-bg;
-    padding: 20px;
-    box-shadow: 0 2px 4px $primary-bg;
-    text-align: center;
-    border-radius: 10px;
-    height: 300px;
-   
-    
-    margin-top: 20px;
+    .dishes-box {
+      background-color: $secondary-bg;
+      padding: 20px;
+      box-shadow: 0 2px 4px $primary-bg;
+      text-align: center;
+      border-radius: 10px;
+      height: 300px;
 
-    .dishes-description {
-      font-family: $primary-font;
-      margin: 20px;
-    }
+      margin-top: 20px;
 
-    .dishes-price {
-      color: $primary-font-color;
-    }
+      .dishes-description {
+        font-family: $primary-font;
+        margin: 20px;
+      }
 
-    .dishes-box-image {
-      transform: translateY(-50px);
+      .dishes-price {
+        color: $primary-font-color;
+      }
+
+      .dishes-box-image {
+        transform: translateY(-50px);
+      }
     }
   }
-}
 
-.dishes-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .dishes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.dishes-btn-select {
-  width: 100px;
-  height: 40px;
-  background-color: $secondary-bg;
-  color: $primary-font-color;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px $secondary-bg;
+  .dishes-btn-select {
+    width: 100px;
+    height: 40px;
+    background-color: $secondary-bg;
+    color: $primary-font-color;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px $secondary-bg;
+  }
 }
