@@ -1,0 +1,20 @@
+.dashboard-page{
+    background-color: #2e303e;
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    .dasboard-page-order{
+        width: 746px;
+        height: 100vh;
+       
+    }
+    .dasboard-page-most-order{
+        width: 375px;
+        height: 777px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

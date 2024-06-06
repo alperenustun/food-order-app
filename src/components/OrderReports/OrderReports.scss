@@ -1,8 +1,8 @@
 @use "../../styles/abstracts/variables" as *;
 
 .order-report-container {
-    color: $font-color-white;
-    padding: 50px;
+    color: $font-color;
+    padding: 5px 10px 0px 10px ;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: $secondary-bg;
@@ -41,6 +41,7 @@
         }
 
         .order-table-body {
+           
 
             .order-body-tr {
                 border: none;
@@ -53,7 +54,7 @@
                     .order-status {
                         padding: 5px 10px;
                         border-radius: 16px;
-                        color: $font-color-white;
+                        color: $font-color;
                         font-weight: 600;
                         text-align: center;
                         font-weight: 200;
@@ -64,14 +65,17 @@
 
                         &.completed {
                             background-color: $completed-color;
+                            color: $completed-text-color;
                         }
 
                         &.preparing {
                             background-color: $preparing-color;
+                            color: $preparing-text-color;
                         }
 
                         &.pending {
                             background-color: $pending-color;
+                            color: $pending-text-color;
                         }
                     }
                 }
@@ -105,8 +109,8 @@
 }
 
 .filter-order-select {
-    background-color: $dashboard-divs;
-    color: $font-color-white;
+    background-color: $secondary-bg;
+    color: $font-color;
     border: none;
     cursor: pointer;
     padding: 15px;
